@@ -14,6 +14,12 @@ The repository contains three main sections.
 | [metadata](./metadata/) | Metadata files are completed by the investigator and by the CDW staff as the project parameters are being defined. |
 
 
+Architecture
+--------------------------------
+This repository documents the existing process, and contains some working ideas on how OUHSC's multiple EMRs can help contribute to research and medical practice knowledge, in a way that's accountable and scalable.  This system will be useful to many **project leads** pursuing a range of activities, including (a) formal research, (b) quality improvement studies (QI), (c) quality assurance and control monitoring of clinical operations, (d) applications for new grants, and (e) demonstrating qualifications for new contracts.  Please see the [documentation](./documentation/) for more information.
+
+<img src="./documentation/architecture/images/global.png" style="width: 2000px;"/>
+
 Collaborators
 --------------------------------
 This project repository has been developed by Will Beasley, Zabrina Antry, Sreeharsha Mandem, and David Bard in [OUHSC Pediatrics](http://www.oumedicine.com/pediatrics), Biomedical and Behavioral Methodology Core ([BBMC](http://www.ouhsc.edu/BBMC/)), and Zsolt Nagykaldi, Director of Research in [OUHSC Family Medicine](http://www.oumedicine.com/familymedicine).
