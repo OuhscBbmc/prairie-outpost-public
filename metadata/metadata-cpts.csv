@@ -1,0 +1,5 @@
+test,abbreviations,cpts,desired
+"Whole Genome Array","CGH","81228",TRUE
+"Carinitine determination-plasma, Acylcarnitine analysis-plasma","CARNCOMBO","82017;82379",TRUE
+"Creatine and guanidinoacetate determination-plasma","CREAGUAN","82540;82543",TRUE
+"cut left finger","ouch","32.4,32.4;32.5;32.9",FALSE

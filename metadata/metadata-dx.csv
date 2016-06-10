@@ -1,0 +1,30 @@
+dx_name,phenotype,icd_9,desired
+benign neoplasm of other specified sites of skin,other organ systems,216.8,TRUE
+congenital hypothyroidism,other organ systems,243,TRUE
+congenital iodine-deficiency syndrome neurological type,other organ systems,244.9,TRUE
+cyst of thyroid,other organ systems,246.2,TRUE
+congenital iodine-deficiency syndrome neurological type,other organ systems,246.9,TRUE
+nondiabetic hypoglycemic coma,other organ systems,251.2,TRUE
+primary hyperparathyroidism,other organ systems,252,TRUE
+pituitary dwarfism,other organ systems,253.3,TRUE
+multiple endocrine neoplasia men type IIA,other organ systems,258.02,TRUE
+precocious sexual development and puberty not elsewhere classified,other organ systems,259.1,TRUE
+malnutrition of moderate degree,other organ systems,263,TRUE
+rickets active,other organ systems,268.9,TRUE
+other nutritional deficiency,other organ systems,269.8,TRUE
+intestinal disaccharidase deficiencies and disaccharide malabsorption,other organ systems,271.3,TRUE
+disorders of magnesium metabolism,other organ systems,275.2,TRUE
+hypocalcemia,other organ systems,275.41,TRUE
+other disorders of calcium metabolism,other organ systems,275.49,TRUE
+other secondary carnitine deficiency,other organ systems,277.84,TRUE
+disorders of fatty acid oxidation,other organ systems,277.85,TRUE
+morbid severe obesity due to excess calories,other organ systems,278,TRUE
+morbid obesity,other organ systems,278.01,TRUE
+common variable immunodeficiency,other organ systems,279.06,TRUE
+hereditary hypogammaglobulinemia,other organ systems,279.3,TRUE
+other specified iron deficiency anemias,other organ systems,280.8,TRUE
+other hemolytic anemias due to enzyme deficiency,other organ systems,282.3,TRUE
+anemia of other chronic disease,other organ systems,285.29,TRUE
+other nonthrombocytopenic purpuras,other organ systems,287.2,TRUE
+eosinophilia,neurological,288.6,TRUE
+autistic disorder current or active state,neurological,299,TRUE
