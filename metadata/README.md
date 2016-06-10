@@ -33,9 +33,10 @@ Data Dictionaries of Metadata Files
 Constraints & Validation Checks:
 * All cells must be nonmissing.
 * `dx_name` cannot be repeated across multiple rows.
-* `dx_name`  must be found in the CDW.  *A warning is thrown otherwise.*
+* `dx_name` must be found in the CDW (specifically, `[ML].[DIAGNOSIS].[DESCRIPTION]`).  *A warning is thrown otherwise.*
 * `icd_9` cannot be repeated across multiple rows.
-* `icd_9` must be found in the CDW or in the [ICD](https://cran.r-project.org/package=icd) R package.  *A warning is thrown otherwise.*
+* `icd_9` must be found in the CDW  (specifically, `[ML].[DIAGNOSIS].[ICDCODE]` where `[ML].[DIAGNOSIS].[CODETYPE]=1` for ICD9) or in the [ICD](https://cran.r-project.org/package=icd) R package.  *A warning is thrown otherwise.*
+* The `dx_name` and `icd_9` combination must match the combination in the CDW.
 
 #### [`metadata-cpts`](metadata-cpts.csv)
 

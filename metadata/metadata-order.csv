@@ -1,5 +1,15 @@
-test,abbreviations,cpts,desired
-"Whole Genome Array","CGH","81228",TRUE
-"Carinitine determination-plasma, Acylcarnitine analysis-plasma","CARNCOMBO","82017;82379",TRUE
-"Creatine and guanidinoacetate determination-plasma","CREAGUAN","82540;82543",TRUE
-"cut left finger","ouch","32.4,32.4;32.5;32.9",FALSE
+category_name,category_id,test,order_code,order_description,desired,comments
+Whole Genome Array,1,,81228,CGH,TRUE,
+Whole Genome Array,1,,x,CGH,TRUE,
+Whole Genome Array,1,,zz,CGH,TRUE,
+Whole Genome Array,1,,zzzz,CGH,TRUE,
+"Carinitine determination-plasma, Acylcarnitine analysis-plasma",2,,82017,CARNCOMBO,TRUE,
+Creatine and guanidinoacetate determination-plasma,3,,82540,CREAGUAN,TRUE,
+cut left finger,4,left pinkie,32.4,ouch,TRUE,
+cut left finger,4,left pinkie,zz,ouch,TRUE,
+cut left finger,4,left external finger,zz,,TRUE,
+cut left finger,4,left outside digit,32.4,,TRUE,
+cut left finger,4,left ring finger,32.4,,TRUE,
+cut left finger,4,left middle finger,32.4,,TRUE,
+cut left finger,4,left pointer finger,32.4,,TRUE,
+cut left finger,4,left thumb,32.4,,FALSE,
