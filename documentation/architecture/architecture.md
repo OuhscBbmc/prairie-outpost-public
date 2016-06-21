@@ -129,7 +129,7 @@ Services and Pricing
 =================================================
 The system should accommodate a wide spectrum of activities, ranging from relatively quick examinations of patient trends, to complicated research questions.  Initially, the system will offer three tiers of service.  We envision that Tiers 0, 1, & 2 projects would store their cache in REDCap, while Tier 3 caches require a relational database (eg, SQL Server).
 
-For more information, please see the related 'services' document, available in the [repository](https://github.com/OuhscBbmc/PrairieOutpost).
+For more information, please see the related 'services' document, available in the [repository](https://github.com/OuhscBbmc/prairie-outpost-public).
 
 -------------
 
@@ -150,7 +150,7 @@ As stated above, our goal with the pilots is to select a few projects (a) that a
 Governance and Approval of Projects
 =================================================
 
-This process is described in the "Governance of Prairie Output Prototype" document, located in the private [repository](https://github.com/OuhscBbmc/PrairieOutpost).  Please contact Will Beasley to request access.
+This process is described in the "Governance of Prairie Output Prototype" document, located in the private [repository](https://github.com/OuhscBbmc/prairie-outpost-public).  Please contact Will Beasley to request access.
 
 -------------
 

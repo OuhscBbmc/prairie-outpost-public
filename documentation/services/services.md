@@ -11,7 +11,7 @@ The best data warehouse isn't very useful if few people can incorporate it into 
 
 The system should accommodate a wide spectrum of activities, ranging from relatively quick examinations of patient trends, to complicated research questions.  Initially, the system will offer four tiers of service.  Projects in Tiers 0, 1, & 2 store their cache in REDCap, while Tier 3 caches require a relational database (eg, SQL Server).
 
-For more information about this project, please see the [repository](https://github.com/OuhscBbmc/PrairieOutpost) documents.  The 'architecture' document is most relevant
+For more information about this project, please see the [repository](https://github.com/OuhscBbmc/prairie-outpost-public) documents.  The 'architecture' document is most relevant
 
 -------------
 
@@ -129,7 +129,7 @@ The investigator has the final responsibility of securing their REDCap credentia
 
 ### Incorporating an Additional External Data Source
 
-The warehouse will rarely contain all rows and column in every table of an external data source (see column 1 in the [Architecture document](https://github.com/OuhscBbmc/PrairieOutpost)).  There may be additional costs if a project needs a portion of an extisting data source that's not currently imports.  There will likely be additional costs if an entirely new data source needs to be connected to the warehouse.
+The warehouse will rarely contain all rows and column in every table of an external data source (see column 1 in the [Architecture document](https://github.com/OuhscBbmc/prairie-outpost-public)).  There may be additional costs if a project needs a portion of an extisting data source that's not currently imports.  There will likely be additional costs if an entirely new data source needs to be connected to the warehouse.
 
 -------------
 
