@@ -1,0 +1,6 @@
+hdid,header,description,reasonable_min,reasonable_max,retain_obs
+NA,age,Age (in years),2,16,TRUE
+55,weight,Weight (in pounds),10,200,TRUE
+61,height,Height (in inches),15,200,TRUE
+2788,bmi,Body Mass Index,0,50,TRUE
+NA,cohort,Cohort (first visit),2008,2016,TRUE

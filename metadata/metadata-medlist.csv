@@ -1,0 +1,27 @@
+table_name,medlist_id,level_by_centricity,level_by_investigator,retain_patient
+Ethnicity,11,Hispanic or Latino,hispanic,TRUE
+Ethnicity,12,Not Hispanic or Latino,not hispanic,TRUE
+Ethnicity,10087,Patient Declined,unknown,TRUE
+Ethnicity,10088,State Prohibited,unknown,TRUE
+Ethnicity,10089,Unspecified,unknown,TRUE
+EthnicitySubcategory,13,Other or Undetermined,unknown,TRUE
+EthnicitySubcategory,10022,Declined,unknown,TRUE
+EthnicitySubcategory,10023,Don't Know,unknown,TRUE
+EthnicitySubcategory,10024,Update,unknown,TRUE
+Race,15,Asian,other,TRUE
+Race,16,White,white,TRUE
+Race,17,Black or African American,black,TRUE
+Race,18,American Indian or Alaska Native,other,TRUE
+Race,24,Native Hawaiian or Other Pacific Islander,other,TRUE
+Race,10084,Patient Declined,unknown,TRUE
+Race,10085,State Prohibited,unknown,TRUE
+Race,10086,Unspecified,unknown,TRUE
+RaceSubcategory,25,Multiracial,other,TRUE
+RaceSubcategory,19,Other,other,TRUE
+RaceSubcategory,20,Undetermined,unknown,TRUE
+RaceSubcategory,21,Chinese,other,TRUE
+RaceSubcategory,22,Filipino,other,TRUE
+RaceSubcategory,23,Japanese,other,TRUE
+RaceSubcategory,10025,Declined,unknown,TRUE
+RaceSubcategory,10026,Don't Know,unknown,TRUE
+RaceSubcategory,14,Hispanic,hispanic,TRUE
