@@ -104,7 +104,10 @@ Constraints & Validation Checks:
 
 --------------------------------------------------------------------
 
-#### [`metadata-cpts`](metadata-cpts.csv)
+#### [`metadata-order`](metadata-order.csv)
+category_name,category_id,test,order_code,order_description,desired,comments
+
+
 
 | Variable | Description |
 | :-------- | :---------- |
