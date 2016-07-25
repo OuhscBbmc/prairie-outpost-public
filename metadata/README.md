@@ -2,8 +2,9 @@ Metadata
 ====================================
 
 Our workflow is built around a series of explicit metadata tables.  We can't fully automate the system, but we're hoping that the metadata files will
+
 * improve clarity and communication between the investigator and the CDW staff,
-* increase the CDW staff's efficiency of querying and manipulating data.
+* increase the CDW staff's efficiency of querying and manipulating data (on the first run, and on subsequent runs).
 
 These metadata files are completed by the investigator and by the CDW staff as the project parameters are being defined.  These are only example datasets --project-specific datasets should be saved in their *private* project-specific repository.
 
@@ -17,8 +18,13 @@ Table of Contents of Metadata Files
 | [`metadata-dx`](metadata-dx.csv) | ICD-9 (and eventually ICD-10) diagnoses relevant to the investigation. |
 | [`metadata-medlist`](metadata-medlist.csv) | The 'medlist' table in Centricity defines many lookup values, such as those for race and ethnicity. |
 | [`metadata-obs-header`](metadata-obs-header.csv) | Defines the types of observations to be considered. |
-| [`metadata-cpts`](metadata-cpts.csv) | Labs and tests relevant to the investigation. |
+| [`metadata-order`](metadata-order.csv) | Labs and tests relevant to the investigation. |
 
+
+Terms
+--------------------------------------------
+* *investigator*: the person ...
+*todo*: add more terms
 
 Data Dictionaries of Metadata Files
 --------------------------------------------
