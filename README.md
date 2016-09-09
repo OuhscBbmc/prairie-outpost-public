@@ -26,6 +26,6 @@ This project repository has been developed by Will Beasley, Zabrina Antry, Sreeh
 
 Support and contributions have also been provided by Judith James ([OSCTR](http://osctr.ouhsc.edu/) Principal Investigator/Program Director), Joel Guthridge ([OMRF](http://omrf.org/) & [OSCTR](http://osctr.ouhsc.edu/)), and Tim VanWagoner ([OSCTR](http://osctr.ouhsc.edu/) Deputy Director); [NIH NIGMS; U54 GM104938](http://grantome.com/grant/NIH/U54-GM104938).  Further support has been received from Bob Roswell and Darrin Akins ([COM](http://www.oumedicine.com/collegeofmedicine) Associate Deans).
 
-For the Centricity EMR, technical support has been provided by Dwayne Keller, Terry Newman, Renee ???, Aaron Clasby, and Cliff Mack of [OU Physicians](https://www.oumedicine.com/ouphysicians) and/or [OUHSC IT](http://it.ouhsc.edu/).  Conceptual support has been provided by Adam McGann, June Pearson, and Kevin Elledge of [OU Physicians](https://www.oumedicine.com/ouphysicians).
+For the Centricity EMR, technical support has been provided by Duane Keller, Terry Newman, Renee ???, Aaron Clasby, and Cliff Mack of [OU Physicians](https://www.oumedicine.com/ouphysicians) and/or [OUHSC IT](http://it.ouhsc.edu/).  Conceptual support has been provided by Adam McGann, June Pearson, and Kevin Elledge of [OU Physicians](https://www.oumedicine.com/ouphysicians).
 
 Security and architectural support has been provided by Cliff Mack, April Lee, Randy Moore, and Mark Ferguson of [OUHSC IT](http://it.ouhsc.edu/).
