@@ -130,3 +130,33 @@ Constraints & Validation Checks:
 * `abbreviations` elements must be found in the CDW.  *A warning is thrown otherwise.*
 * `cpts` elements cannot be repeated across multiple rows.
 * `cpts` elements must be found in the CDW.  *A warning is thrown otherwise.*
+
+
+
+--------------------------------------------------------------------
+####Location of Care Code
+*In the `WHERE` section of code, the `[NAME]` and `[ABBREVNAME]` will change for each project.
+
+```SELECT  
+  d.LOCOFCARE 
+  , l.[NAME] 
+  , COUNT(*) AS document_count 
+  , l.[SEARCHNAME] 
+  , l.[ABBREVNAME] 
+  , l.[ADDRESS1] 
+FROM centricity.[DOCUMENT] AS d 
+  LEFT OUTER JOIN [centricity_emr].[peek].[LOCREG] AS l ON d.LOCOFCARE=l.LOCID 
+WHERE 
+  ([NAME] LIKE '%comm%') 
+  OR ([NAME] LIKE '%latin%') 
+  OR ([NAME] LIKE '%general%') 
+  OR ([NAME] LIKE '%adolesc%') 
+  OR ([ABBREVNAME* LIKE '%sp_ou%') 
+GROUP BY  
+  d.LOCOFCARE 
+  ,l.[NAME] 
+  ,l.[SEARCHNAME] 
+  ,l.[ABBREVNAME] 
+  ,l.[ADDRESS1] 
+ORDER BY document_count DESC 
+```
