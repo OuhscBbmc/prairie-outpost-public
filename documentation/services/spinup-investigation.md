@@ -1,9 +1,5 @@
 # Spinup CDW Investigation Steps
 
-# Definitions
-
-
-# Steps
 
 ## Determine Project Tag
 
@@ -53,6 +49,27 @@ Geneva
 1. Creates a folder in the top-level of the BBMC fileserver.
 1. Completes the request to Peds IS (incorporating the usernames from the intro email to), which should take about a day.
 1. Asks the investigators to double-check they have access to the space.
+
+
+## Repository files
+
+1. Assemble & configure metadata files.
+
+1. Develop 'staging lanes' that move & manipulate project-approved data from the CDW database to the staging area database.
+
+    Both databases live in the same SQL Server hosted by Shared Services.  Sometimes the transportation stream never leaves the server; sometimes it is processed by [R](https://www.r-project.org/) on a workstation on the network.
+
+1. Develop 'dispense lanes' that move & manipulate project-approved data from staging area database into the REDCap project.  
+
+    REDCap is also hosted by Shared Services.  ODBC carries data from the database to a network workstation.  The REDCap API (via our [REDCapR](https://CRAN.R-project.org/package=REDCapR) package) carries data from the workstation to the REDCap instance.
+
+1. Develop static reports, which present the aggregated or de-identified data.  The reports' typical roles include
+
+    * document how much data moved where & when (for the sake of validity checks).
+    * present the statistical analysis.
+
+
+1. Develop interactive [Shiny](https://shiny.rstudio.com/gallery/) reports  on the BBMC's server, hosted by Shared Services.  Data is either aggregated or de-identified.
 
 
 ## CDW Cache Staging
