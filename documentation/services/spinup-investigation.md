@@ -95,6 +95,10 @@ Template to send Peds IS.  Steps 1, 2, & 5 need to be modified for each project.
 1. Develop interactive [Shiny](https://shiny.rstudio.com/gallery/) reports  on the BBMC's server, hosted by Shared Services.  Data is either aggregated or de-identified.
 
 
+## ODBC DSN
+
+Besides a clone of the repository, the only thing on the workstation is the ODBC DSN.  These need to be set up for the outpost and cache_staging only once, with [these instructions](https://github.com/OuhscBbmc/BbmcResources/blob/master/instructions/odbc-dsn.md#create-local-dsn).
+
 ## CDW Cache Staging
 
 The cache_staging database already exists.  Create a schema (to organize the project's tables, and keep them isolated from )
