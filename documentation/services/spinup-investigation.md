@@ -21,7 +21,7 @@ The version-controls software [GitHub](https://github.com/OuhscBbmc) is used to 
 
 1. When the collaborators create their accounts, add them to the team.  If this is their first time in an [OuhscBbmc](https://github.com/OuhscBbmc) team, they'll first need to respond to an automated email that invites them into the organization.
 
-    Periodically, check that [two-factor authentication](https://help.github.com/articles/about-two-factor-authentication/) is enabled for these users.  We will soon use software to [require](https://help.github.com/articles/requiring-two-factor-authentication-in-your-organization/) everyone to enable it.
+    We [require](https://help.github.com/articles/requiring-two-factor-authentication-in-your-organization/) all users to enable [two-factor authentication](https://help.github.com/articles/about-two-factor-authentication/).  
 1. Add the file structure skeleton.
 
 ## Confirm IRB protocol
