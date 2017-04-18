@@ -17,7 +17,7 @@ The version-controls software [GitHub](https://github.com/OuhscBbmc) is used to 
 
 1. Create a [Team](https://help.github.com/articles/setting-up-teams/) with read & write (but not admin) privileges for the repository.
 
-1. Add the CDW staff to the team: [zantry](https://github.com/orgs/OuhscBbmc/people/zantry), [genevamarshall](https://github.com/orgs/OuhscBbmc/people/genevamarshall), [mand9472](https://github.com/orgs/OuhscBbmc/people/mand9472), [wibeasley](https://github.com/orgs/OuhscBbmc/people/wibeasley), & [DavidBard](https://github.com/orgs/OuhscBbmc/people/DavidBard).  Because no PHI is contained in the repository, this list can include CDW staff that aren't included in the IRB proposal.
+1. Add the CDW staff to the team ([zantry](https://github.com/orgs/OuhscBbmc/people/zantry) [genevamarshall](https://github.com/orgs/OuhscBbmc/people/genevamarshall) [mand9472](https://github.com/orgs/OuhscBbmc/people/mand9472) [wibeasley](https://github.com/orgs/OuhscBbmc/people/wibeasley) [DavidBard](https://github.com/orgs/OuhscBbmc/people/DavidBard)).  Because no PHI is contained in the repository, this list can include CDW staff that aren't included in the IRB proposal.
 
 1. When the collaborators create their accounts, add them to the team.  If this is their first time in an [OuhscBbmc](https://github.com/OuhscBbmc) team, they'll first need to respond to an automated email that invites them into the organization.
 
