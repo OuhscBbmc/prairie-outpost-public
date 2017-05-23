@@ -28,4 +28,4 @@ Support and contributions have also been provided by Judith James ([OSCTR](http:
 
 For the Centricity EMR, technical support has been provided by Duane Keller, Terry Newman, Renee ???, Aaron Clasby, and Cliff Mack of [OU Physicians](https://www.oumedicine.com/ouphysicians) and/or [OUHSC IT](http://it.ouhsc.edu/).  Conceptual support has been provided by Adam McGann, June Pearson, and Kevin Elledge of [OU Physicians](https://www.oumedicine.com/ouphysicians).
 
-Security and architectural support has been provided by Cliff Mack, April Lee, Randy Moore, and Mark Ferguson of [OUHSC IT](http://it.ouhsc.edu/).
+Security and architectural support has been provided by Cliff Mack, April Lee, Randy Moore, Renee Taber, and Mark Ferguson of [OUHSC IT](http://it.ouhsc.edu/).
