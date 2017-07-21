@@ -96,9 +96,14 @@ The warehouse can contain only existing data from upstream external data sources
 * The backup requirements can be relaxed, compared to the vigilance required of clinical databases.  If the entire warehouse were accidentally deleted, no information would be irrevocably lost, because the Ellis lanes would re-import from the original sources.  Regardless, the warehouse will be backed up regularly to avoid this time-consuming operation that could stress the upstream sources and campus network.
 
 Here is a summary of the warehouse internals.  Details are specified in a separate technical documents.
+
 1. If there are *k* large external sources in column 1, column 3 contains up to *k* + 2 databases.
 1. For each large external source, a single 'staging' database may exists in the CDW.  Because some external sources are available to the CDW pipeline for only a portion of a day, a 'firehose' transports the desired subset of columns and tables to the CDW before the window closes.  Although the CDW could theoretically access a live EMR, it was decided to access the EMR's read-only companion server.  This isolation substantially reduces the possibility that the CDW ecosystem could negatively affect patient care.  Because less risk is involved, the CDW's development costs are lowered.
 1. The core of the CDW is a single large SQL Server database.  It contains several layers of hierarchy, as data from the different sources is assimilated.
+
+    Multivariate-informed cleaning is an example of an operation that occurs between layers in this database.  For instance, some patients had extremely high or low BMI values, which were caused by their height or weight entered in mislabeled units (*e.g.*, 36 cm instead of 36 inches for a toddler).  One cleaning procedure compares the observed height and weight values to national norms.  If a height observation is 1.5 standard deviations below the 3rd percentile, the value is multiplied by 2.54 as an attempt to recover a clean value in inches.  If this product falls within acceptable range for the patient's age and gender,it is retained; otherwise, the value becomes missing.  This cleaning procedure has been adapted for other patient characteristics where (a) an acceptable range is established and (b) there is a single theory why the data point was mis-entered, and how to correct it.  Of course, the original observation is retained, if case the investigator wishes to use it in column 6.
+
+    This cleaning procedure demonstrates the CDW's overall goal to deliver a dataset that can be analyzed almost immediately.  By delivering a clean dataset, barriers are lowered.  This helps young investigators generate new research and make training opportunities more productive.
 1. Before exporting a project cache (to column 5), the data is first stored in a final SQL Server database.  This single database is partitioned into schemas.  A separate schema is dedicated to a project cache.  Authorization to a cache is granted only to CDW staff assigned to the research project, and approved by the IRB.
 
 ### Dispensary (column 4)
@@ -125,7 +130,12 @@ The existing dispensary lanes have been developed in [R](http://cran.rstudio.com
     * Tier 0: Cookie-cutter in REDCap with fake data (free)
 
 ### Authorized Researchers/Users (column 6)
-{*Describe the users, and how they'll access and use the cache.* }
+
+Once authenticated in column 6, researchers and practitioners are able to conduct any subsequent operations approved by the IRB.  REDCap provides some basic graphics and descriptive statistics.  For more advanced analysis, there are [many libraries](http://redcap-tools.github.io/projects/) in popular languages that access data through REDCap's API, including our recommendation of [REDCapR](https://github.com/OuhscBbmc/REDCapR).
+
+For several pilot projects, the CDW staff has developed interactive [Shiny](https://shiny.rstudio.com/) reports that facilitate descriptive and inferential analysis.
+
+In another instance, the CDW staff developed an automated report that informs researchers of potential participants.  These individuals are selected from a collaborating clinic's patients who meet certain criteria.
 
 -------------
 
@@ -139,9 +149,7 @@ For more information, please see the related 'services' document, available in t
 
 Planned Future Capabilities
 =================================================
-As stated above, our goal with the pilot projects is to select about a dozen investigations (a) that are suffering from a lack of this long-overdue capability and (b) can be achieved by this (relatively) simple one-way flow of information.  We recognize that this initial design cannot address all future needs.  Here are some additional capabilities that we might incorporate in the future.  If you anticipate a need that is not addressed by the current plan and these additional capabilities, please tell us.
-
-1. **De-identified Section** Vanderbilt's system is divided into a section with patient-identified data, and section where all PHI has been stripped.  The first part is necessary for most research, but the second helps generate research *proposals* faster.  As I understand it, the researcher doesn't need to go through as many regulatory and oversight steps, which can takes weeks or months (especially if answering one questions begs a series of others, which requires repeated trips through the IRB).  They can obtain counts (eg, of the patients with a certain combination of diagnoses) quickly as they're gauging the feasibility of their proposed research.
+As stated above, the overall goal of the pilot projects is to select about a dozen investigations (a) that are suffering from a lack of this long-overdue capability and (b) can be achieved by this (relatively) simple one-way flow of information.  The next wave of additions to the ecosystem are the following:
 
 1. **Forecasting** has become an important tool in health care and social services, and the faculty on the CDW team have had success implementing a real-time state-wide prediction mechanism for Oklahoma's Child Protection Services (CPS).  It determines a risk-score for each individual in a home suspected of child maltreatment.  The algorithm considers factors such as (a) the thorough snapshot of the environment at the time of the report, (b) the evidence and details behind the allegations, and (c) the perpetrators' entire history documented in the state agency's database.  The risk-score informs the state's decision to remove a child into custody, or to allow the family to remain together wile receiving "Intensive Safety Services" ([ISS](http://www.okdhs.org/OKDHS%20PDF%20Library/ChildandFamilyServicesPlan2015-2019_cws_10052016.pdf)).  Over the past two years, this Waiver program has saved the state's foster home costs, while decreasing recurrent maltreatment reports.  Companion projects have later connected the CPS data sources with a different state databases (*i.e.*, the vital birth records and the home-visiting services provided by the Department of Health).
 
@@ -149,30 +157,31 @@ As stated above, our goal with the pilot projects is to select about a dozen inv
 
     The CDW's team of statisticians, database administrators, and EMR experts have started to work with OU Physicians to provide location-level and patient-level forecasts.
 
-1. [**Hadoop**](http://hadoop.apache.org/) is a common foundation for big data analytics.  It allows an operation (such as estimating a statistical model) to execute across multiple machines with local, nonshared data.  The CDW's current projects have analyzed (relatively) tidy rectangular datasets that are adequately accommodated by [R](http://cran.rstudio.com/) and SQL Server.  However, future projects will involve more intense analysis of larger hierarchical structures containing unstructured text.  These tasks are better accommodated by Hadoop because the operations are more flexible, and are not constrained by the RAM of a single machine.
-
 1. [**i2b2**](https://www.i2b2.org/) is the NIH-funded open-source informatics warehouse deployed in many translational research centers.  Potentially it replaces most of column 3, or potentially it consumes data from column 3 (as suggested by a fellow OSCTR university with i2b2) and becomes essentially a huge project cache in column 5.
 
     Many teams have requested to be included in the CDW's pilot projects, and the volume of authorized researchers and practitioners on campus is expected to rapidly increase over the next five years.  The interface of i2b2 will accommodate this growth, because its interface design and support documentation has already received much more investment than our single campus could ever invest in ours.  A campus instance of i2b2 will leverage knowledge and effort from inside and outside the OUHSC campus.
 
-    The CDW development team has been evaluating i2b2 since the beginning, and chose to delay its deployment because most of the initial lessons were independent of the column 3 implementation (such as learning the schema of the column 1 sources).  These lessons are still applicable when i2b2 is incorporated.
+    The CDW development team has been evaluating i2b2 since the planning stage, and chose to delay its deployment because most of the initial lessons are independent of the column 3 implementation (such as learning the schema of the column 1 sources).  These lessons are still applicable when i2b2 is incorporated.
 
-1. [TriNetX](https://www.trinetx.com/) is a health sciences research organizations that uses i2b2 to connect investigators on a campus to larger research projects, particularly pharmaceutical trials.  Collaborating with TriNetX should provide more research opportunities for investigators and more revenue streams for the university.
-    * its existence will expose our CDW staff to other approaches and institutions, so we can learn
+1. [**TriNetX**](https://www.trinetx.com/) is a health sciences research organizations that uses i2b2 to connect investigators on a campus to larger research projects, particularly pharmaceutical trials.  Collaborating with TriNetX should provide more research opportunities for investigators and more revenue streams for the university.
+
+1. [**Hadoop**](http://hadoop.apache.org/) is a common foundation for big data analytics.  It allows an operation (such as estimating a statistical model) to execute across multiple machines with local, nonshared data.  The CDW's current projects have analyzed (relatively) tidy rectangular datasets that are adequately accommodated by [R](http://cran.rstudio.com/) and SQL Server.  However, future projects will involve more intense analysis of larger hierarchical structures containing unstructured text.  These tasks are better accommodated by Hadoop because the operations are more flexible, and are not constrained by the RAM of a single machine.
+
+1. **De-identified Section** Vanderbilt's system is divided into a section with patient-identified data, and different section without PHI.  The first section is necessary for most research, but the section helps generate research *proposals* faster.  Because PHI has been removed, less regulation and oversight is required for each inquiry, which otherwise can takes weeks or months (especially if answering one questions begs a series of others, which requires repeated trips through the IRB).  Researchers can obtain counts (*e.g.*, of the patients with a certain combination of diagnoses) quickly as to gauge the feasibility of their proposed research.  The CDW development team will implement this capability following the deployment of i2b2.  (i2b2 provides much of this already, such as the "[Patient Count Plug-in](https://www.i2b2.org/software/files/PDF/current/PatientCount_Functional_Specification.pdf)")
 
 
 -------------
 
 Possible Future Capabilities
 =================================================
-The following capabilities have been discussed as beneficial to the campus.  They are not prioritized to be included in the next wave of CDW development, but this could be influenced by new needs and/or funding.  The CDW has been designed so that these features could be incorporated in the future, and not require breaking changes to the existing architecture.
+The following capabilities have been discussed as beneficial to the campus.  They are not prioritized to be included in the next wave of CDW development, but this could be influenced by new needs and/or funding.  The CDW has been designed so that these features could be incorporated in the future, and not require breaking changes to the existing architecture.  Here are some additional capabilities that we might incorporate in the future.  If you anticipate a need that is not addressed by the current plan and these additional capabilities, please tell us.
 
 1. **Provenance**: Currently, once a data point is accepted by the warehouse, it's history is erased.  In other words, it's not possible to tell if a value came from data source A, B, or C.  The origin/history may need to be retained in the warehouse, in order to meet regulatory or research needs.
 
 1. **Selectively Updating the Cache**:  For the pilots, the PI data cache cannot have a portion of the data updated.  Everything must be erased and updated with the current state of the warehouse.  This is undesirable, because any changes made to the cache would be lost as well.  In the future, we'd like the users to have the ability to both (a) modify their cache while (b) receive updates from the warehouse.
 
 1. **[GPC](http://www.gpcnetwork.org/)**
-    * similar to TriNetX, its existence will expose our CDW staff to other approaches and institutions.  It improves our existing infrastructure (by giving us access to existing pipeline code) and giving us smoother pathway access to the GPC repository of data.
+    * This collaborative shares data, and is facilitated by each member's i2b2 installation.  Similar to TriNetX, joining the GPC will expose our CDW staff to other approaches and institutions.  It improves our existing infrastructure (by giving us access to existing pipeline code) and providing smoother access to the GPC's repository of data.
 
 
 -------------
