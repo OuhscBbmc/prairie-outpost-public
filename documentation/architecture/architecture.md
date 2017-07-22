@@ -51,61 +51,57 @@ Component Details
 
     These project-specific databases were created for several reasons.  First, the ecosystem is easier to maintain when all sources are assimilated similarly.  Second, REDCap's existing user-level authentication is leveraged.  Third, the separation of components should make the system more flexible in the future, allowing some components to be updated or replaced, without substantial changes to the rest of the ecosystem.
 
-The BBMC personnel responsible for the CDW have experience created warehouse for other institutions with disparate data sources, including the State's [Health Department](https://www.ok.gov/health/) and the State's [Department of Human Services](http://www.okdhs.org).
+The BBMC personnel responsible for the CDW have experience creating warehouses for other institutions with disparate data sources, including the State's [Health Department](https://www.ok.gov/health/) and the State's [Department of Human Services](http://www.okdhs.org).
 
-* {*Zsolt's terminology: We may use campus "Clinical Data Repositories" or something similar. Data may move from various CDRs to the CDW. This will leave the door open for federated data access in the future (indexing, without moving data to the CDW), which I would not even bring up now.*}
 
 ### Ellis Island (column 2)
-This software layer controls what information is passed to the warehouse.  It will be responsible for:
+This software layer controls what information is passed to the warehouse.  It is responsible for:
 
-* Transforming individual values (eg, translating missing codes to a standardized set).
-* Transforming data structures (eg, from a [wide](http://en.wikipedia.org/wiki/Wide_and_narrow_data) to a long format -necessary for many suboptimal non-EMR sources).
-* Verifying the incoming dataset conforms to an expected schema.
+* Transforming individual values (*e.g.*, translating missing codes to a standardized set).
+* Transforming data structures (*e.g.*, from a [wide](http://en.wikipedia.org/wiki/Wide_and_narrow_data) to a long format -necessary for many suboptimal non-EMR sources).
+* Transforming some variables into [OMOP](https://github.com/OHDSI/CommonDataModel/wiki)-compliant attributes.
+* Verifying the incoming dataset conforms to an expected structure.
 * Quarantining dirty records that cannot be validated and transformed.
 
 #### Specifying the filter
-The last bullet is the most subjective.  The goal is to deny all dirty data (while permitting all good data), however it can be difficult to determine the threshold between 'good' and 'bad'.  The specification of the filtering algorithm will consider several tradeoffs, such (a) allowing too much dirty data weakens downstream statistical conclusions, yet (b) dispensing only perfect records typically produces a sample that's too small, and not a representative of the population.
+Design of the quarantine algorithm can be subjective.  The goal is to deny all dirty data (while permitting all good data), however it can be difficult to determine the threshold.  The specification of the filtering algorithm will consider several tradeoffs, such (a) allowing too much dirty data weakens downstream statistical conclusions, yet (b) dispensing only perfect records typically produces a sample that's too small, and not a representative of the population.
 
-The goals become even murkier when the threshold between clean and dirty differs between projects.  Research pursuing causal claims typically favor strong internal validity, and thus desire higher filter thresholds.  In contrast, research estimating population trends typically favor strong external validity, and thus desire more lenient thresholds.  We anticipate most OUHSC QI projects will fall in the middle of this spectrum.  The statisticians, system architects, and governance board should discuss this issue and consider how to best address the campus needs.  One possible solution is to indicate the completeness & cleanliness of each record.  This would allow the casual research to filter out dirty records more easily.
+The goals become even murkier when the threshold between clean and dirty differs between projects.  Research pursuing causal claims typically favor strong internal validity, and thus desire higher filter thresholds.  In contrast, research estimating population trends typically favor strong external validity, and thus desire more lenient thresholds.  We anticipate most OUHSC QI projects will fall in the middle of this spectrum.  The statisticians, system architects, and governance board continue to discuss this issue and consider how to best address the campus needs.  One possible future solution is to indicate the completeness & cleanliness of each record.  This would allow the casual research to filter out dirty records more easily.
 
-Ingress metadata will be logged so we can monitor and adjust the filter and label definitions.
+Ingress metadata will be logged to permit the CDW staff to monitor and adjust the filter and label definitions.
 
 #### Selecting software
-The schema of an EMR won't change frequently, so it's preferable to use a language that catches discrepancies (between the EMR and Ellis code, and between the Ellis code and the Warehouse) at compile time.  This suggests using strongly-typed ADO.NET datasets in C#, especially considering the campus's preference for Windows and SQL Server.  With previous with large datasets, we've had success with the [ADO Bulk Inserts](https://msdn.microsoft.com/en-us/library/vstudio/1y8tb169%28v=vs.100%29.aspx) which don't bother wrapping each record in a transaction, but still validate the values before committing the whole batch.
-
-I'm not opposed to something like Django or Java if a proponent wants to discuss it; using these languages might mean using Postgres instead of SQL Server.  Also, there's no reason why all lanes in Ellis Island need to use the same language.  Two or three languages might provide more flexibility (to accommodate different data sources and team members) while still being a manageable code base.  We should consider using a functional language for the smaller data sources that are likely to change, and a strongly-typed/OO language for the more mature & stable datasources.  Perhaps only the metadata logging mechanism would need to be developed in duplication.
+The structure of an EMR does not change frequently, so it's preferable to use a language that catches discrepancies (between the EMR and Ellis code, and between the Ellis code and the Warehouse) at compile time.  This suggests using strongly-typed ADO.NET datasets in C#, especially considering the campus's preference for Windows and SQL Server.  With previous with large datasets, we've had success with the [ADO Bulk Inserts](https://msdn.microsoft.com/en-us/library/vstudio/1y8tb169%28v=vs.100%29.aspx) which do not wrap each record in a transaction, but still validate the values before committing the whole batch.
 
 #### Avoiding unnecessary data
-Following the [agile software principles](http://www.agilemanifesto.org/), all features of all data sources will not be replicated in the warehouse.  Development will start with the elements most relevant to immediate research and QI goals on campus.  Avoiding the unnecessary tables and columns will:
+Following [agile software principles](http://www.agilemanifesto.org/), all features of all data sources will not be replicated in the warehouse.  Development has started with the elements most relevant to immediate research and QI goals on campus.  Avoiding the unnecessary tables and columns will continue to :
 
 * Reduce software development time.
 * Reduce the nightly updates, as well as hardware, storage, and network requirements.
 * Decrease the chances the Ellis code and data warehouse code will need to change when the schema of the external data sources are modified.
 
-We'll also try to avoid copying unnecessary rows.  Ideally the nightly operations copy only the new and modified records.  If the data source doesn't expose  record timestamps, additional mechanisms will need to be developed.  Less sophisticated data sources (which are less likely to contain timestamps than larger systems) may be small enough to copy every night.
-
 
 ### HSC Warehouse (column 3)
-A [column-major data structure](http://searchdatamanagement.techtarget.com/definition/columnar-database) is preferred over the the typical OLTP database, because it is optimized for batch processing.  The development team is currently working withthe [columnstore feature in SQL Server 2016](http://searchsqlserver.techtarget.com/feature/SQL-Server-2014-columnstore-index-the-good-the-bad-and-the-clustered), since it's relatively easy to find programmers that are comfortable with SQL Server, and Campus IT supports hosted versions of it.
+A [column-major data structure](http://searchdatamanagement.techtarget.com/definition/columnar-database) is preferred over the the typical OLTP database, because it is optimized for batch processing.  The development team is currently working with the [columnstore feature in SQL Server 2016](http://searchsqlserver.techtarget.com/feature/SQL-Server-2014-columnstore-index-the-good-the-bad-and-the-clustered), since it is easier to find programmers that are comfortable with SQL Server in Oklahoma City, and Campus IT is most comfortable with it.
 
-Depending on the types of free text it will store, a "document database", or some type of NoSQL database may be incorporated. There are other data sources besides EMRs; however they're mostly contained by conventional databases, and thus won't require the flexibility and headaches of NoSQL.  The third column of the CDW ecosystem is platform agnostic as possible; its incoming and outgoing interfaces have been specified so that the column's implementation could be replaced (with something like i2b2) without re-developing the other five columns.
+Depending on how free text will be analyzed in the future, a "document database", or some type of NoSQL database may be incorporated. There are other data sources besides EMRs in column 1; however they use conventional databases, and thus do not require the flexibility and challenges of NoSQL.  The third column of the CDW ecosystem is as platform agnostic as possible; its incoming and outgoing interfaces have been specified so that the warehouse implementation could be replaced (with something like i2b2) without re-developing the other five columns.
 
-The internals of the warehouse need to be flexible, and not try to pursue 'the right way' to represent data.  At the very least, it needs to anticipate and accommodate:
+The internals of the warehouse need to be flexible, and not pursue 'the right way' to represent data.  It needs to anticipate and accommodate:
 
-1. Multiple data sources with different and potentially incompatible *schemas*.
-2. Multiple data sources with different and potentially conflicting *values* (eg, an EMR reports a different DOB than a tissue repository).
-3. Iterations and evolution over time.  As Judith James observed, the schema we specified in 2015 won't be perfect.  We'll always want to adapt and improve the system as we learn ways to improve it to facilitate better research.  We don't want a brittle system that is frozen in time.
-4. New data sources that aren't currently considered, or perhaps do not currently exist.
+1. Multiple data sources with different and potentially incompatible *structures*.
+2. Multiple data sources with different and potentially conflicting *values* (*e.g.*, an EMR reports a different DOB than a tissue repository).
+3. Iterations and evolution over time.  As Judith James observed, the specification in 2015 will not be perfect.  Elements in the ecosystem should adapt as the team learns how to facilitate research more efficiently.  They cannot be brittle and frozen in time.
+4. New data sources that do not yet exist.
 
 The warehouse can contain only existing data from upstream external data sources (column 1).  Some consequences of its copy-cat behavior are:
 
 * The external data sources (Column 1) will never reflect any data modifications that occur in the Warehouse (Column 3) or Project Caches (Column 4).  The CDW will not be used by providers to inform clinical care for a specific patient.
-* It does not have a GUI or any capability for humans to enter new data.  If a researcher needs to collect measures that aren't in an existing data source, a new database (separate from the warehouse) will need to be created.
-* The backup requirements can be relaxed, compared to the vigilance required of clinical databases.  If the entire warehouse were accidentally deleted, no information would be irrevocably lost, because the Ellis lanes would re-import from the original sources.  Regardless, the warehouse will be backed up regularly to avoid this time-consuming operation that could stress the upstream sources and campus network.
+* It does not have a GUI or other capability for humans to enter data.  If a researcher plans to collect measures that are not in an existing data source, a new database (separate from the warehouse) will need to be created in Column 1.
+* The backup requirements can be relaxed, compared to the vigilance required of clinical databases.  If the entire warehouse were accidentally deleted, no information would be irrevocably lost, because the Ellis lanes would re-import from the original sources.  Regardless, the warehouse will be backed up regularly to avoid a time-consuming operation that could stress the upstream sources and campus network.
 
 Here is a summary of the warehouse internals.  Details are specified in a separate technical documents.
 
-1. If there are *k* large external sources in column 1, column 3 contains up to *k* + 2 databases.
+1. If there are *k* large external sources in Column 1, then Column 3 may contain up to *k* + 2 databases.
 1. For each large external source, a single 'staging' database may exists in the CDW.  Because some external sources are available to the CDW pipeline for only a portion of a day, a 'firehose' transports the desired subset of columns and tables to the CDW before the window closes.  Although the CDW could theoretically access a live EMR, it was decided to access the EMR's read-only companion server.  This isolation substantially reduces the possibility that the CDW ecosystem could negatively affect patient care.  Because less risk is involved, the CDW's development costs are lowered.
 1. The core of the CDW is a single large SQL Server database.  It contains several layers of hierarchy, as data from the different sources is assimilated.
 
