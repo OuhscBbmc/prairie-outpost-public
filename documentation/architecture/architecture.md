@@ -43,7 +43,15 @@ Component Details
 
 ### External Data Sources (column 1)
 
-* The BBMC has done something similar with OHCA, OSDH, & DHS data.  Family Medicine has done something similar with zzzz.  This resembles those efforts in that zzzz.
+* All information contained in the CDW ecosystem is derived from the data sources in column 1, and can be placed in the following categories:
+    1. The two large sources from OU Physicians are currently connected and provide data nightly: the Centricity EMR (which contains primarily patient medical data), and IDX (which contains primarily patient financial information).  The OU Physicians team has been a strong supporter of the CDW mission.
+    1. The Hospital's Meditech EMR does not have a live connection with the CDW, although static snapshots have been incorporated for specific projects.  
+    1. Some researchers and clinics have been independently  maintaining their own data sources.  Among those collaborating with the CDW team, their databases have been included in column 1.
+    1. Two pilots projects have required new data that is not collected in the EMRs.  Instead of allowing the projects to enter data directly into the CDW, the CDW staff developed REDCap databases for these investigations; these then serve as sources in column 1.
+
+    These project-specific databases were created for several reasons.  First, the ecosystem is easier to maintain when all sources are assimilated similarly.  Second, REDCap's existing user-level authentication is leveraged.  Third, the separation of components should make the system more flexible in the future, allowing some components to be updated or replaced, without substantial changes to the rest of the ecosystem.
+
+The BBMC personnel responsible for the CDW have experience created warehouse for other institutions with disparate data sources, including the State's [Health Department](https://www.ok.gov/health/) and the State's [Department of Human Services](http://www.okdhs.org).
 
 * {*Zsolt's terminology: We may use campus "Clinical Data Repositories" or something similar. Data may move from various CDRs to the CDW. This will leave the door open for federated data access in the future (indexing, without moving data to the CDW), which I would not even bring up now.*}
 
@@ -80,7 +88,7 @@ We'll also try to avoid copying unnecessary rows.  Ideally the nightly operation
 ### HSC Warehouse (column 3)
 A [column-major data structure](http://searchdatamanagement.techtarget.com/definition/columnar-database) is preferred over the the typical OLTP database, because it is optimized for batch processing.  The development team is currently working withthe [columnstore feature in SQL Server 2016](http://searchsqlserver.techtarget.com/feature/SQL-Server-2014-columnstore-index-the-good-the-bad-and-the-clustered), since it's relatively easy to find programmers that are comfortable with SQL Server, and Campus IT supports hosted versions of it.
 
-Depending on the types of free text it will store, a "document database", or some type of NoSQL database may be incorporated. There are other datasources besides EMRs; however they're mostly contained by conventional databases, and thus won't require the flexibility and headaches of NoSQL.  The third column of the CDW ecosystem is platform agnostic as possible; its incoming and outgoing interfaces have been specified so that the column's implementation could be replaced (with something like i2b2) without re-developing the other five columns.
+Depending on the types of free text it will store, a "document database", or some type of NoSQL database may be incorporated. There are other data sources besides EMRs; however they're mostly contained by conventional databases, and thus won't require the flexibility and headaches of NoSQL.  The third column of the CDW ecosystem is platform agnostic as possible; its incoming and outgoing interfaces have been specified so that the column's implementation could be replaced (with something like i2b2) without re-developing the other five columns.
 
 The internals of the warehouse need to be flexible, and not try to pursue 'the right way' to represent data.  At the very least, it needs to anticipate and accommodate:
 
@@ -104,6 +112,8 @@ Here is a summary of the warehouse internals.  Details are specified in a separa
     Multivariate-informed cleaning is an example of an operation that occurs between layers in this database.  For instance, some patients had extremely high or low BMI values, which were caused by their height or weight entered in mislabeled units (*e.g.*, 36 cm instead of 36 inches for a toddler).  One cleaning procedure compares the observed height and weight values to national norms.  If a height observation is 1.5 standard deviations below the 3rd percentile, the value is multiplied by 2.54 as an attempt to recover a clean value in inches.  If this product falls within acceptable range for the patient's age and gender,it is retained; otherwise, the value becomes missing.  This cleaning procedure has been adapted for other patient characteristics where (a) an acceptable range is established and (b) there is a single theory why the data point was mis-entered, and how to correct it.  Of course, the original observation is retained, if case the investigator wishes to use it in column 6.
 
     This cleaning procedure demonstrates the CDW's overall goal to deliver a dataset that can be analyzed almost immediately.  By delivering a clean dataset, barriers are lowered.  This helps young investigators generate new research and make training opportunities more productive.
+
+    The structure of this layer is modeled on [OMOP CDM V5](https://github.com/OHDSI/CommonDataModel/wiki), which is a Common Data Model (CDM) that multiple institutions can follow.  The interoperability (a) promotes collaboration between researchers and (b) leverages smaller datasets to produce a larger, more comprehensive perspective of a medical condition.
 1. Before exporting a project cache (to column 5), the data is first stored in a final SQL Server database.  This single database is partitioned into schemas.  A separate schema is dedicated to a project cache.  Authorization to a cache is granted only to CDW staff assigned to the research project, and approved by the IRB.
 
 ### Dispensary (column 4)
@@ -169,7 +179,6 @@ As stated above, the overall goal of the pilot projects is to select about a doz
 
 1. **De-identified Section** Vanderbilt's system is divided into a section with patient-identified data, and different section without PHI.  The first section is necessary for most research, but the section helps generate research *proposals* faster.  Because PHI has been removed, less regulation and oversight is required for each inquiry, which otherwise can takes weeks or months (especially if answering one questions begs a series of others, which requires repeated trips through the IRB).  Researchers can obtain counts (*e.g.*, of the patients with a certain combination of diagnoses) quickly as to gauge the feasibility of their proposed research.  The CDW development team will implement this capability following the deployment of i2b2.  (i2b2 provides much of this already, such as the "[Patient Count Plug-in](https://www.i2b2.org/software/files/PDF/current/PatientCount_Functional_Specification.pdf)")
 
-
 -------------
 
 Possible Future Capabilities
@@ -180,8 +189,10 @@ The following capabilities have been discussed as beneficial to the campus.  The
 
 1. **Selectively Updating the Cache**:  For the pilots, the PI data cache cannot have a portion of the data updated.  Everything must be erased and updated with the current state of the warehouse.  This is undesirable, because any changes made to the cache would be lost as well.  In the future, we'd like the users to have the ability to both (a) modify their cache while (b) receive updates from the warehouse.
 
-1. **[GPC](http://www.gpcnetwork.org/)**
-    * This collaborative shares data, and is facilitated by each member's i2b2 installation.  Similar to TriNetX, joining the GPC will expose our CDW staff to other approaches and institutions.  It improves our existing infrastructure (by giving us access to existing pipeline code) and providing smoother access to the GPC's repository of data.
+
+1. [**SAFTINet**](http://www.ucdenver.edu/academics/colleges/medicalschool/programs/ACCORDS/coho/saftinet/Pages/default.aspx). The members of '​The Scalable Architecture for Federated Translational Inquiries Network' have specified common [structures]((https://github.com/OHDSI/CommonDataModel/wiki) and [software](http://www.ucdenver.edu/academics/colleges/medicalschool/programs/ACCORDS/COHO/saftinet/technology/rosita/Pages/default.aspx) to facilitate collaboration between institutions and their independent data warehouses.  We have already implemented some features of the [OMOP CDM]((https://github.com/OHDSI/CommonDataModel/wiki), and will continue to implement the rest of the structure for two reasons.  First, many experts have invested knowledge and time in this AHRQ-funded standard; it is likely to be superior to any locally-developed structure.  Second, it more easily lowers the barriers to future investigations with [OHDSI](https://www.ohdsi.org/) and [SAFTINet](http://www.ucdenver.edu/academics/colleges/medicalschool/programs/ACCORDS/COHO/saftinet/Pages/default.aspx) members.
+
+1. **[GPC](http://www.gpcnetwork.org/)** This collaborative shares data, and is facilitated by each member's i2b2 installation.  Similar to TriNetX, joining the GPC will expose our CDW staff to other approaches and institutions.  It improves our existing infrastructure (by giving us access to existing pipeline code) and providing smoother access to the GPC's repository of data.
 
 
 -------------
