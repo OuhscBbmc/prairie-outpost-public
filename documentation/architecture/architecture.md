@@ -210,7 +210,20 @@ Some features are beyond the scope of the CDW.  These are listed below to furthe
 Governance and Approval of Projects
 =================================================
 
-This process is described in the "Governance of Prairie Output Prototype" document, located in the private [repository](https://github.com/OuhscBbmc/prairie-outpost-public).  Please contact Will Beasley to request access.
+This process is described in the "Governance of Prairie Output Prototype" document, located in the  [repository](https://github.com/OuhscBbmc/prairie-outpost-public).  Please contact Will Beasley to request access.
+
+-------------
+
+Ecosystem Servers
+=================================================
+The ecosystem currently includes the following machines, hosted by the University IT department's virtual infrastructure.  (Servers in Column 1 are not included.)
+
+* **Staging, Warehouse, & Cache Databases**: Windows Server [2012 R2](https://technet.microsoft.com/en-us/library/hh801901.aspx); SQL Server [2016](https://www.microsoft.com/en-us/sql-server/sql-server-2016).
+* **REDCap Database**: Windows Server [2012](https://technet.microsoft.com/en-us/library/hh801901.aspx); MySQL [5.5](https://dev.mysql.com/downloads/mysql/5.5.html).
+* **REDCap Webserver**: Windows Server [2012](https://technet.microsoft.com/en-us/library/hh801901.aspx); [IIS](https://www.iis.net/overview) Webserver. REDCap [7](https://projectredcap.org/).
+* **Shiny -Public**: Red Hat Enterprise Linux [7](https://access.redhat.com/products/red-hat-enterprise-linux); R [3.4](https://www.r-project.org/about.html); RStudio [Shiny Open Source](https://www.rstudio.com/products/shiny/); RStudio [Server](https://www.rstudio.com/products/rstudio/).
+* **Shiny -Private**: Red Hat Enterprise Linux [7](https://access.redhat.com/products/red-hat-enterprise-linux); R [3.4](https://www.r-project.org/about.html); RStudio [Shiny Professional](https://www.rstudio.com/products/shiny-server-pro/); RStudio [Server](https://www.rstudio.com/products/rstudio/).
+
 
 -------------
 
