@@ -124,13 +124,13 @@ The existing dispensary lanes have been developed in [R](http://cran.rstudio.com
 4. The caches are not large enough to expose R's limitations with big data.
 
 ### PI Caches (column 5)
-* The PHI will be delivered in a container that requires LDAP authentication to access.  Emailing the patient data in an Excel file is virtually condoning bad & risky behavior.  Distributing Excel files requires the recipient to create their own one-off data system, which they likely lack the knowledge and time to do properly.  It should be easy for researchers to follow best security practices, and delivering the PHI in REDCap or SQL Server is a big help.
+* The PHI will be delivered in a container that requires LDAP authentication to access.  Emailing the patient data in an Excel file is essentially encouraging poor security practices.  Distributing Excel files requires the recipient to create their own one-off data system, which they likely lack the knowledge and time to do properly.  In contrast, delivering PHI through REDCap to authenticated investigators helps them follow approved security practices.
 
-* A REDCap project should address most needs, although we expect that the exceptionally complex studies will require a relational database.  SQL Server is our recommendation for OUHSC, since Campus IT is most experienced with it.  
+* A REDCap project should address the needs of most investigations, although we expect that the exceptionally complex ones will require a relational database.  SQL Server is our recommendation for OUHSC, since Campus IT is most experienced with it.  
 
     To conserve time and resources, initially the caches will be hosted by the same SQL Server (but in an isolated database that requires different credentials and does not share data).  As the CDW ecosystem scales out, these caches can be hosted by a different server.  
 
-* Four service options  (see the 'Services and Pricing' section below)
+* Four service options are available to investigators (see the 'Services and Pricing' section below)
     * Tier 3: Multilevel data in a relational database, like SQL Server (retainer + hourly fee)
     * Tier 2: 3D box in REDCap (hourly fee)
     * Tier 1: Cookie-cutter in REDCap (free)
@@ -140,15 +140,18 @@ The existing dispensary lanes have been developed in [R](http://cran.rstudio.com
 
 Once authenticated in column 6, researchers and practitioners are able to conduct any subsequent operations approved by the IRB.  REDCap provides some basic graphics and descriptive statistics.  For more advanced analysis, there are [many libraries](http://redcap-tools.github.io/projects/) in popular languages that access data through REDCap's API, including our recommendation of [REDCapR](https://github.com/OuhscBbmc/REDCapR).
 
-For several pilot projects, the CDW staff has developed interactive [Shiny](https://shiny.rstudio.com/) reports that facilitate descriptive and inferential analysis.
-
-In another instance, the CDW staff developed an automated report that informs researchers of potential participants.  These individuals are selected from a collaborating clinic's patients who meet certain criteria.
+The pilot studies have used Column 6 several different ways, including:
+    * the investigator accessed the cache as delivered and reviewed the data.
+    * the investigator collaborated with a statistician (who was not a member of the CDW staff) who accessed and analyzed the data.
+    * the investigator contracted a CDW statician who analyzed the data.
+    * the CDW staff developed an interactive [Shiny](https://shiny.rstudio.com/) report that facilitate descriptive and inferential analysis.
+    * the CDW staff developed an automated report that informs participant recruitment.  The researchers limit their efforts to only the eligible patients (who belong to a collaborating clinic) on the daily list.  As a result, the investigation became more efficient, and fewer patients were inconvenienced.
 
 -------------
 
 Services and Pricing
 =================================================
-The system should accommodate a wide spectrum of activities, ranging from relatively quick examinations of patient trends, to complicated research questions.  Initially, the system will offer three tiers of service.  We envision that Tiers 0, 1, & 2 projects would store their cache in REDCap, while Tier 3 caches require a relational database (eg, SQL Server).
+The system should accommodate a wide spectrum of activities, ranging from relatively quick examinations of patient trends, to complicated research questions.  Initially, the system currently offers three tiers of service.  Projects in Tiers 0, 1, and 2 projects store their cache in REDCap, while Tier 3 caches may require a relational database like SQL Server.
 
 For more information, please see the related 'services' document, available in the repository's [documentation](https://github.com/OuhscBbmc/prairie-outpost-public/tree/master/documentation).
 
