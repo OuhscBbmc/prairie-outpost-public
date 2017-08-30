@@ -1,140 +1,30 @@
-dx_name,icd_10,include,exclude,enforce,,
-"Major Depressive disorder, single episode, mild", F32.0 ,TRUE,FALSE,,,
-moderate,F32.1,TRUE,FALSE,,,
-severe,F32.2,TRUE,FALSE,,,
-with psychotic features,F32.3,TRUE,FALSE,,,
-in partial remission,F32.4,TRUE,FALSE,,,
-in full remission,F32.5,TRUE,FALSE,,,
-Other specified depressive disorder,F32.8,TRUE,FALSE,,,
-"MDD, single episode unspecified or Unspecified depressive disorder",F32.9,TRUE,FALSE,,,
-" MDD, recurrent episode, mild",F33.0,TRUE,FALSE,,,
-moderate,F33.1,TRUE,FALSE,,,
-severe,F33.2,TRUE,FALSE,,,
-with psychotic features,F33.3,TRUE,FALSE,,,
-in partial remission,F33.41 ,TRUE,FALSE,,,
- in full remission,F33.42 ,TRUE,FALSE,,,
-unspecified,F33.9    ,TRUE,FALSE,,,
-Cyclothymic disorder,F34.0 ,TRUE,FALSE,,,
-Persistent Depressive Disorder (dysthymia),F34.1 ,TRUE,FALSE,,,
-Agoraphobia,F40.00 ,TRUE,FALSE,,,
-Social Anxiety Disorder (Social phobia),F40.10 ,TRUE,FALSE,,,
-"Specific phobia, animal",F40.218,TRUE,FALSE,,,
-Natural environment,F40.228,TRUE,FALSE,,,
-Fear of blood,F40.230,TRUE,FALSE,,,
-Fear of injections and transfusions,F40.231,TRUE,FALSE,,,
-Fear of other medical care,F40.232,TRUE,FALSE,,,
-Fear of injury,F40.233,TRUE,FALSE,,,
-Situational,F40.248,TRUE,FALSE,,,
-Other,F40.298,TRUE,FALSE,,,
-Panic Disorder,F41.0 ,TRUE,FALSE,,,
-Generalized anxiety disorder,F41.1 ,TRUE,FALSE,,,
-Other specified anxiety disorder,F41.8,TRUE,FALSE,,,
-Unspecified anxiety disorder,F41.9 ,TRUE,FALSE,,,
-"Hoarding disorder or OCD or other specified OCD & 
-related disorder or unspecified OCD & related disorder",F42 ,TRUE,FALSE,,,
-Acute Stress Disorder,F43.0 ,TRUE,FALSE,,,
-PTSD,F43.10,TRUE,FALSE,,,
-"Adjustment disorders, unspecified",F43.20,TRUE,FALSE,,,
-with depressive mood,F43.21,TRUE,FALSE,,,
-with anxiety,F43.22,TRUE,FALSE,,,
-with mixed anxiety and depressed mood,F43.23,TRUE,FALSE,,,
-with disturbance of conduct,F43.24,TRUE,FALSE,,,
-with mixed disturbance of emotions and conduct,F43.25,TRUE,FALSE,,,
-Other specified trauma and stressor related siorder,F43.8 ,TRUE,FALSE,,,
-Unspecified trauma and stressor related disorder,F43.9 ,TRUE,FALSE,,,
-"Conversion disorder, with abnormal 
-movement/speech symptoms/swallowing symptoms/weakness/paralysis",F44.4 ,TRUE,FALSE,,,
-with attacks or seizures,F44.5,TRUE,FALSE,,,
-with anesthesia or sensory loss or special sensory symptoms,F44.6,TRUE,FALSE,,,
-with special mixed symptoms,F44.7,TRUE,FALSE,,,
-Somatic Symptom disorder,F45.1 ,TRUE,FALSE,,,
-Illness anxiety disorder,F45.21,TRUE,FALSE,,,
-Other specified somatic symptom and related disorder,F45.8 ,TRUE,FALSE,,,
-Unspecified somatic symptom and related disorder,F45.9 ,TRUE,FALSE,,,
-Other specified mental disorder or Unspecified mental disorder,F99 ,TRUE,FALSE,,,
-Other disorders of psychological development,F88 ,TRUE,FALSE,,,
-Unspecified disorder of psychological development,F89 ,TRUE,FALSE,,,
-Separation Anxiety Disorder,F93.0 ,TRUE,FALSE,,,
-Other childhood emotional disorders,F93.8 ,TRUE,FALSE,,,
-"Childhood emotional disorder, unspecified",F93.9 ,TRUE,FALSE,,,
-"Other specified behavioral and emotional disorders
- with onset usually occurring in childhood and adolescence",F98.8 ,TRUE,FALSE,,,
-"Unspecified behavioral and emotional disorders with onset 
-usually occurring in childhood and adolescence",F98.9 ,TRUE,FALSE,,,
-Disruptive Mood dysregulation disorder,F34.8         ,FALSE,TRUE,,,
-"Psychotic disorder due to another medical condition, With delusions",F06.2,FALSE,TRUE,,,
-"Depressive disorder due to another medical condition, With depressive features",F06.31,FALSE,TRUE,,,
-"Depressive disorder due to another medical condition, With major depressive-like episode",F06.32,FALSE,TRUE,,,
-"Bipolar and related disorder due to another medical condition, With manic features",F06.33,FALSE,TRUE,,,
-"Bipolar and related disorder due to another medical condition, With manic- or hypomanic-like episodes",F06.33,FALSE,TRUE,,,
-"Bipolar and related disorder due to another medical condition, With mixed features",F06.34,FALSE,TRUE,,,
-"Depressive disorder due to another medical condition, With mixed features",F06.34,FALSE,TRUE,,,
-Anxiety disorder due to another medical condition,F06.4,FALSE,TRUE,,,
-Obsessive-compulsive and related disorder due to another medical condition,F06.8,FALSE,TRUE,,,
-Other specified mental disorder due to another medical condition,F06.8,FALSE,TRUE,,,
-Personality change due to another medical condition,F07.0,FALSE,TRUE,,,
-Unspecified mental disorder due to another medical condition,F09,FALSE,TRUE,,,
-"Schizoaffective disorder, Bipolar type",F25.0,FALSE,TRUE,,,
-"Schizoaffective disorder, Depressive type",F25.1,FALSE,TRUE,,,
-Other specified schizophrenia spectrum and other psychotic disorder,F28,FALSE,TRUE,,,
-Unspecified schizophrenia spectrum and other psychotic disorder,F29,FALSE,TRUE,,,
-"Bipolar I disorder, Current or most recent episode hypomanic",F31.0,FALSE,TRUE,,,
-"Bipolar I disorder, Current or most recent episode manic, Mild",F31.11,FALSE,TRUE,,,
-"Bipolar I disorder, Current or most recent episode manic, Moderate",F31.12,FALSE,TRUE,,,
-"Bipolar I disorder, Current or most recent episode manic, Severe",F31.13,FALSE,TRUE,,,
-"Bipolar I disorder, Current or most recent episode manic, With psychotic features",F31.2,FALSE,TRUE,,,
-"Bipolar I disorder, Current or most recent episode depressed, Mild",F31.31,FALSE,TRUE,,,
-"Bipolar I disorder, Current or most recent episode depressed, Moderate",F31.32,FALSE,TRUE,,,
-"Bipolar I disorder, Current or most recent episode depressed, Severe",F31.4,FALSE,TRUE,,,
-"Bipolar I disorder, Current or most recent episode depressed, With psychotic features",F31.5,FALSE,TRUE,,,
-"Bipolar I disorder, Current or most recent episode hypomanic, In partial remission",F31.73,FALSE,TRUE,,,
-"Bipolar I disorder, Current or most recent episode manic, In partial remission",F31.73,FALSE,TRUE,,,
-"Bipolar I disorder, Current or most recent episode hypomanic, In full remission",F31.74,FALSE,TRUE,,,
-"Bipolar I disorder, Current or most recent episode manic, In full remission",F31.74,FALSE,TRUE,,,
-"Bipolar I disorder, Current or most recent episode depressed, In partial remission",F31.75,FALSE,TRUE,,,
-"Bipolar I disorder, Current or most recent episode depressed, In full remission",F31.76,FALSE,TRUE,,,
-Bipolar II disorder,F31.81,FALSE,TRUE,,,
-Other specified bipolar and related disorder,F31.89,FALSE,TRUE,,,
-"Bipolar I disorder, Current or most recent episode depressed, Unspecified",F31.9,FALSE,TRUE,,,
-"Bipolar I disorder, Current or most recent episode hypomanic, Unspecified",F31.9,FALSE,TRUE,,,
-"Bipolar I disorder, Current or most recent episode manic, Unspecified",F31.9,FALSE,TRUE,,,
-"Bipolar I disorder, Current or most recent episode unspecified",F31.9,FALSE,TRUE,,,
-Unspecified bipolar and related disorder,F31.9,FALSE,TRUE,,,
-,,FALSE,TRUE,,,
-"Attention-deficit/hyperactivity disorder, Predominantly inattentive presentation",F90.0,FALSE,TRUE,,,
-"Attention-deficit/hyperactivity disorder, Predominantly hyperactive/impulsive presentation",F90.1,FALSE,TRUE,,,
-"Attention-deficit/hyperactivity disorder, Combined presentation",F90.2,FALSE,TRUE,,,
-Other specified attention-deficit/hyperactivity disorder,F90.8,FALSE,TRUE,,,
-Unspecified attention-deficit/hyperactivity disorder,F90.9,FALSE,TRUE,,,
-"Conduct disorder, Childhood-onset type",F91.1,FALSE,TRUE,,,
-"Conduct disorder, Adolescent-onset type",F91.2,FALSE,TRUE,,,
-Oppositional defiant disorder,F91.3,FALSE,TRUE,,,
-"Other specified disruptive, impulse-control, and conduct disorder",F91.8,FALSE,TRUE,,,
-"Conduct disorder, Unspecified onset",F91.9,FALSE,TRUE,,,
-"Unspecified disruptive, impulse-control, and conduct disorder",F91.9,FALSE,TRUE,,,
-,,,,,,
-,,,,,,
-,,,,,,
-,,,,,,
-,,,,,,
-,,,,,,
-,,,,,,
-,,,,,,
-,,,,,,
-,,,,,,
-,,,,,,
-,,,,,,
-,,,,,,
-,,,,,,
-,,,,,,
-,,,,,,
-,,,,,,
-,,,,,,
-,,,,,,
-,,,,,,
-,,,,,,
-,,,,,,
-,,,,,,
-,,,,,,
-,,,,,,
-,,,,,,
+dx_name,phenotype,icd_9,desired
+benign neoplasm of other specified sites of skin,other organ systems,216.8,TRUE
+congenital hypothyroidism,other organ systems,243,TRUE
+congenital iodine-deficiency syndrome neurological type,other organ systems,244.9,TRUE
+cyst of thyroid,other organ systems,246.2,TRUE
+congenital iodine-deficiency syndrome neurological type,other organ systems,246.9,TRUE
+nondiabetic hypoglycemic coma,other organ systems,251.2,TRUE
+primary hyperparathyroidism,other organ systems,252,TRUE
+pituitary dwarfism,other organ systems,253.3,TRUE
+multiple endocrine neoplasia men type IIA,other organ systems,258.02,TRUE
+precocious sexual development and puberty not elsewhere classified,other organ systems,259.1,TRUE
+malnutrition of moderate degree,other organ systems,263,TRUE
+rickets active,other organ systems,268.9,TRUE
+other nutritional deficiency,other organ systems,269.8,TRUE
+intestinal disaccharidase deficiencies and disaccharide malabsorption,other organ systems,271.3,TRUE
+disorders of magnesium metabolism,other organ systems,275.2,TRUE
+hypocalcemia,other organ systems,275.41,TRUE
+other disorders of calcium metabolism,other organ systems,275.49,TRUE
+other secondary carnitine deficiency,other organ systems,277.84,TRUE
+disorders of fatty acid oxidation,other organ systems,277.85,TRUE
+morbid severe obesity due to excess calories,other organ systems,278,TRUE
+morbid obesity,other organ systems,278.01,TRUE
+common variable immunodeficiency,other organ systems,279.06,TRUE
+hereditary hypogammaglobulinemia,other organ systems,279.3,TRUE
+other specified iron deficiency anemias,other organ systems,280.8,TRUE
+other hemolytic anemias due to enzyme deficiency,other organ systems,282.3,TRUE
+anemia of other chronic disease,other organ systems,285.29,TRUE
+other nonthrombocytopenic purpuras,other organ systems,287.2,TRUE
+eosinophilia,neurological,288.6,TRUE
+autistic disorder current or active state,neurological,299,TRUE
