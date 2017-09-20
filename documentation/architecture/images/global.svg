@@ -14,7 +14,7 @@
    height="765"
    id="svg2"
    version="1.1"
-   inkscape:version="0.48.5 r10040"
+   inkscape:version="0.91 r13725"
    sodipodi:docname="global.svg"
    inkscape:export-filename="D:\Projects\Ouhsc\Bbmc\prairie-outpost-public\plans\architecture\images/global.png"
    inkscape:export-xdpi="300"
@@ -27,7 +27,7 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="2.91"
-     inkscape:cx="369.54086"
+     inkscape:cx="318.16629"
      inkscape:cy="484.7705"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
@@ -799,7 +799,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -923,25 +923,25 @@
        inkscape:connector-type="polyline"
        id="path4659-7"
        d="m 517.6777,-319.23696 135.72457,-29.26655"
-       style="fill:none;stroke:#b6b6b6;stroke-width:5.35539627;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-end:url(#Arrow2Mend-1s)" />
+       style="fill:none;stroke:#b6b6b6;stroke-width:5.35539627;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow2Mend-1s)" />
     <path
        inkscape:connector-curvature="100"
        inkscape:connector-type="polyline"
        id="path4659-8"
        d="m 517.52732,-242.41934 134.9247,53.43525"
-       style="fill:none;stroke:#b6b6b6;stroke-width:5.0547123;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-end:url(#Arrow2Mend-1s)" />
+       style="fill:none;stroke:#b6b6b6;stroke-width:5.0547123;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow2Mend-1s)" />
     <path
        inkscape:connector-curvature="100"
        inkscape:connector-type="polyline"
        id="path4659-1"
        d="m 517.55086,-295.12587 134.60735,0"
-       style="fill:none;stroke:#b6b6b6;stroke-width:5.10174513;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-end:url(#Arrow2Mend-1s)" />
+       style="fill:none;stroke:#b6b6b6;stroke-width:5.10174513;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow2Mend-1s)" />
     <path
        inkscape:connector-curvature="100"
        inkscape:connector-type="polyline"
        id="path4659-1-8"
        d="m 517.54046,-269.30445 135.22331,30.03332"
-       style="fill:none;stroke:#b6b6b6;stroke-width:5.08093357;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-end:url(#Arrow2Mend-1s)" />
+       style="fill:none;stroke:#b6b6b6;stroke-width:5.08093357;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow2Mend-1s)" />
     <flowRoot
        transform="translate(-23,487.74434)"
        xml:space="preserve"
@@ -1053,7 +1053,7 @@
        inkscape:connector-type="polyline"
        id="path4659-1-4"
        d="m 721.92933,-368.30831 41.76206,0.72621"
-       style="fill:none;stroke:#b6b6b6;stroke-width:2.41468835;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-end:url(#Arrow2Mend-1s)" />
+       style="fill:none;stroke:#b6b6b6;stroke-width:2.41468835;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow2Mend-1s)" />
     <path
        inkscape:connector-curvature="0"
        id="path1934-4"
@@ -1573,19 +1573,19 @@
        inkscape:connector-type="polyline"
        id="path4659-1-4-1"
        d="m 721.92933,-306.71995 41.76206,0.72621"
-       style="fill:none;stroke:#b6b6b6;stroke-width:2.41468835;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-end:url(#Arrow2Mend-1s)" />
+       style="fill:none;stroke:#b6b6b6;stroke-width:2.41468835;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow2Mend-1s)" />
     <path
        inkscape:connector-curvature="100"
        inkscape:connector-type="polyline"
        id="path4659-1-4-6"
        d="m 721.92933,-243.1316 41.76206,0.72621"
-       style="fill:none;stroke:#b6b6b6;stroke-width:2.41468835;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-end:url(#Arrow2Mend-1s)" />
+       style="fill:none;stroke:#b6b6b6;stroke-width:2.41468835;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow2Mend-1s)" />
     <path
        inkscape:connector-curvature="100"
        inkscape:connector-type="polyline"
        id="path4659-1-4-9"
        d="m 721.92933,-179.54324 41.76206,0.72621"
-       style="fill:none;stroke:#b6b6b6;stroke-width:2.41468835;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-end:url(#Arrow2Mend-1s)" />
+       style="fill:none;stroke:#b6b6b6;stroke-width:2.41468835;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow2Mend-1s)" />
     <g
        id="g3813-2-5"
        transform="matrix(0.04465051,0,0,0.05466635,675.65684,-220.78388)"
@@ -2136,7 +2136,7 @@
          id="tspan4393-5-11">Egress Lane 4</tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#737373;fill-opacity:1;stroke:none;font-family:Sans"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#737373;fill-opacity:1;stroke:none"
        x="525.65161"
        y="-298.21466"
        id="text5028-1-5"
@@ -2144,7 +2144,7 @@
          sodipodi:role="line"
          x="525.65161"
          y="-298.21466"
-         style="font-size:14px;font-style:normal;fill:#737373;fill-opacity:1;stroke:none"
-         id="tspan4393-7">Engress Lane 2</tspan></text>
+         style="font-style:normal;font-size:14px;fill:#737373;fill-opacity:1;stroke:none"
+         id="tspan4393-7">Egress Lane 2</tspan></text>
   </g>
 </svg>
