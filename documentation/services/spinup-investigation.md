@@ -43,7 +43,7 @@ Send the following emails to collaborators:
 
 ## Metadata files
 
-Zabrina works with the investigators to complete the metadata necessary for the specific project.  Start with [these templates](https://github.com/OuhscBbmc/prairie-outpost-public/tree/master/metadata).
+Ashley Thumann works with the investigators to complete the metadata necessary for the specific project.  Start with [these templates](https://github.com/OuhscBbmc/prairie-outpost-public/tree/master/metadata).
 
 
 ## Fileserver space
@@ -71,7 +71,7 @@ Template to send Peds IS.  Steps 1, 2, & 5 need to be modified for each project.
 >     * Michael Taylor (username mtaylor; email michael-taylor-2@ouhsc.edu) -Centricity team
 >     * Ian Stewart (username isteward; email ian-steward@ouhsc.edu) -Principal Investigator
 >     * William Preston (username wpreston; email william-preston@ouhsc.edu) -Research Post doc
-> 6. DO NOT grant permission inheritance from the bbmc root folder (ie, `\\redacted/BBMC`).  In other words, we’d like only specified BBMC members to have access to the project folder --membership in group `peds-bbmc-users` is NOT sufficient to access the folder.  (However membership in the group `peds-bbmc-admin` is sufficient.)
+> 6. DO NOT grant permission inheritance from the bbmc root folder (ie, `\\redacted/BBMC`).  In other words, we???d like only specified BBMC members to have access to the project folder --membership in group `peds-bbmc-users` is NOT sufficient to access the folder.  (However membership in the group `peds-bbmc-admin` is sufficient.)
 
 
 ## Repository files
@@ -116,7 +116,7 @@ GO
 ## REDCap project
 
 1.  Create roles & assign users
-    * `admin` has all rights *except* API.  Includes Zabrina, Will(a), David(a), & Sree(a).
+    * `admin` has all rights *except* API.  Includes Ashley, Will(a), David(a), & Sree(a).
     * `api` has only API rights.  Includes Will & Sree.
     * `investigator` has insert/update/delete right.  But cannot modify the data structure or user rights.  The user cannot access the API until they've had training (how to secure the token and extracted PHI).
 
