@@ -22,7 +22,7 @@ This repository documents the existing process, and contains some working ideas 
 
 Collaborators
 --------------------------------
-This project repository has been developed by Will Beasley, Zabrina Antry, Sreeharsha Mandem, and David Bard in [OUHSC Pediatrics](http://www.oumedicine.com/pediatrics), Biomedical and Behavioral Methodology Core ([BBMC](http://www.ouhsc.edu/BBMC/)), and Zsolt Nagykaldi, Director of Research in [OUHSC Family Medicine](http://www.oumedicine.com/familymedicine).
+This project repository has been developed by Will Beasley, Zabrina Antry, Sreeharsha Mandem, Ashley Thumann, and David Bard in [OUHSC Pediatrics](http://www.oumedicine.com/pediatrics), Biomedical and Behavioral Methodology Core ([BBMC](http://www.ouhsc.edu/BBMC/)), and Zsolt Nagykaldi, Director of Research in [OUHSC Family Medicine](http://www.oumedicine.com/familymedicine).
 
 Support and contributions have also been provided by Judith James ([OSCTR](http://osctr.ouhsc.edu/) Principal Investigator/Program Director), Joel Guthridge ([OMRF](http://omrf.org/) & [OSCTR](http://osctr.ouhsc.edu/)), and Tim VanWagoner ([OSCTR](http://osctr.ouhsc.edu/) Deputy Director); [NIH NIGMS; U54 GM104938](http://grantome.com/grant/NIH/U54-GM104938).  Further support has been received from Bob Roswell and Darrin Akins ([COM](http://www.oumedicine.com/collegeofmedicine) Associate Deans).
 
