@@ -1,7 +1,8 @@
-# Spinup CDW Investigation Steps
+Spinup CDW Investigation Steps
+======================================================
 
-
-## Determine Project Tag
+Determine Project Tag
+------------------------------------------------------
 
 This name will be used in many places, including the (a) GitHub repository, (b) fileserver space, (c) CDW staging area, and (d) REDCap project.
 
@@ -9,7 +10,8 @@ The name should incorporate (a) PI's last name(s), (b) rough content area, (c) s
 
 This document's examples use the fictional project tag 'beasley-sloth-3', and usernames 'qqcdwstaff1', 'qqinvestigator2'
 
-## GitHub repository
+GitHub repository
+------------------------------------------------------
 
 The version-controls software [GitHub](https://github.com/OuhscBbmc) is used to manage a lot of the BBMC assignments, code, and aggregated/de-identified reports. No data or PHI gets on GitHub (or ever leaves IT-approved storage devices, like file servers or databases).
 
@@ -24,7 +26,8 @@ The version-controls software [GitHub](https://github.com/OuhscBbmc) is used to 
     We [require](https://help.github.com/articles/requiring-two-factor-authentication-in-your-organization/) all users to enable [two-factor authentication](https://help.github.com/articles/about-two-factor-authentication/).  
 1. Add the file structure skeleton.
 
-## Confirm IRB protocol
+Confirm IRB protocol
+------------------------------------------------------
 
 Ask for the IRB-approved document (not just their draft) of the protocol.  
 1. Confirm they have permission to access PHI through the EMR/CDW.  (This is just an initial screen; we'll check the features more granularly later.)
@@ -32,7 +35,8 @@ Ask for the IRB-approved document (not just their draft) of the protocol.
 1. Save the document in the repository at `documentation/irb/`.
 
 
-## Establish/confirm collaborator accounts
+Establish/confirm collaborator accounts
+------------------------------------------------------
 
 Send the following emails to collaborators:
 
@@ -41,12 +45,14 @@ Send the following emails to collaborators:
 1. GitHub repository (use [this skeleton](https://github.com/OuhscBbmc/BbmcResources/blob/master/instructions/github.md)).
 
 
-## Metadata files
+Metadata files
+------------------------------------------------------
 
 Ashley Thumann works with the investigators to complete the metadata necessary for the specific project.  Start with [these templates](https://github.com/OuhscBbmc/prairie-outpost-public/tree/master/metadata).
 
 
-## Fileserver space
+Fileserver space
+------------------------------------------------------
 
 Ideally all PHI is contained within the warehouse and the REDCap cache.  However, some times the project requires storing files with PHI fileserver space.
 
@@ -95,11 +101,13 @@ Template to send Peds IS.  Steps 1, 2, & 5 need to be modified for each project.
 1. Develop interactive [Shiny](https://shiny.rstudio.com/gallery/) reports  on the BBMC's server, hosted by Shared Services.  Data is either aggregated or de-identified.
 
 
-## ODBC DSN
+ODBC DSN
+------------------------------------------------------
 
 Besides a clone of the repository, the only thing on the workstation is the ODBC DSN.  These need to be set up for the outpost and cache_staging only once, with [these instructions](https://github.com/OuhscBbmc/BbmcResources/blob/master/instructions/odbc-dsn.md#create-local-dsn).
 
-## CDW Cache Staging
+CDW Cache Staging
+------------------------------------------------------
 
 The cache_staging database already exists.  Create a schema (to organize the project's tables, and keep them isolated from )
 
@@ -113,7 +121,8 @@ GO
 ```
 
 
-## REDCap project
+REDCap project
+------------------------------------------------------
 
 1.  Create roles & assign users
     * `admin` has all rights *except* API.  Includes Ashley, Will(a), David(a), & Sree(a).
