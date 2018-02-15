@@ -1,7 +1,8 @@
-# Spinup CDW Investigation Steps
+Spinup CDW Investigation Steps
+======================================================
 
-
-## Determine Project Tag
+Determine Project Tag
+------------------------------------------------------
 
 This name will be used in many places, including the (a) GitHub repository, (b) fileserver space, (c) CDW staging area, and (d) REDCap project.
 
@@ -9,7 +10,8 @@ The name should incorporate (a) PI's last name(s), (b) rough content area, (c) s
 
 This document's examples use the fictional project tag 'beasley-sloth-3', and usernames 'qqcdwstaff1', 'qqinvestigator2'
 
-## GitHub repository
+GitHub repository
+------------------------------------------------------
 
 The version-controls software [GitHub](https://github.com/OuhscBbmc) is used to manage a lot of the BBMC assignments, code, and aggregated/de-identified reports. No data or PHI gets on GitHub (or ever leaves IT-approved storage devices, like file servers or databases).
 
@@ -24,7 +26,8 @@ The version-controls software [GitHub](https://github.com/OuhscBbmc) is used to 
     We [require](https://help.github.com/articles/requiring-two-factor-authentication-in-your-organization/) all users to enable [two-factor authentication](https://help.github.com/articles/about-two-factor-authentication/).  
 1. Add the file structure skeleton.
 
-## Confirm IRB protocol
+Confirm IRB protocol
+------------------------------------------------------
 
 Ask for the IRB-approved document (not just their draft) of the protocol.  
 1. Confirm they have permission to access PHI through the EMR/CDW.  (This is just an initial screen; we'll check the features more granularly later.)
@@ -32,7 +35,8 @@ Ask for the IRB-approved document (not just their draft) of the protocol.
 1. Save the document in the repository at `documentation/irb/`.
 
 
-## Establish/confirm collaborator accounts
+Establish/confirm collaborator accounts
+------------------------------------------------------
 
 Send the following emails to collaborators:
 
@@ -41,12 +45,78 @@ Send the following emails to collaborators:
 1. GitHub repository (use [this skeleton](https://github.com/OuhscBbmc/BbmcResources/blob/master/instructions/github.md)).
 
 
-## Metadata files
+Metadata files
+------------------------------------------------------
 
 Ashley Thumann works with the investigators to complete the metadata necessary for the specific project.  Start with [these templates](https://github.com/OuhscBbmc/prairie-outpost-public/tree/master/metadata).
 
 
-## Fileserver space
+
+Repository files
+------------------------------------------------------
+
+1. Assemble & configure metadata files.
+
+1. Develop 'staging lanes' that move & manipulate project-approved data from the CDW database to the staging area database.
+
+    Both databases live in the same SQL Server hosted by Shared Services.  Sometimes the transportation stream never leaves the server; sometimes it is processed by [R](https://www.r-project.org/) on a workstation on the network.
+
+1. Develop 'dispense lanes' that move & manipulate project-approved data from staging area database into the REDCap project.  
+
+    REDCap is also hosted by Shared Services.  ODBC carries data from the database to a network workstation.  The REDCap API (via our [REDCapR](https://CRAN.R-project.org/package=REDCapR) package) carries data from the workstation to the REDCap instance.
+
+1. Develop static reports, which present the aggregated or de-identified data.  The reports' typical roles include
+
+    * document how much data moved where & when (for the sake of validity checks).
+    * present the statistical analysis.
+
+
+1. Develop interactive [Shiny](https://shiny.rstudio.com/gallery/) reports  on the BBMC's server, hosted by Shared Services.  Data is either aggregated or de-identified.
+
+ODBC DSN
+------------------------------------------------------
+
+Besides a clone of the repository, the only thing on the workstation is the ODBC DSN.  These need to be set up for the outpost and cache_staging only once, with [these instructions](https://github.com/OuhscBbmc/BbmcResources/blob/master/instructions/odbc-dsn.md#create-local-dsn).
+
+CDW Cache Staging
+------------------------------------------------------
+
+The cache_staging database already exists.  Create a schema (to organize the project's tables, and keep them isolated from )
+
+```sql
+CREATE SCHEMA [beasley_sloth_3]
+
+GRANT DELETE, INSERT, SELECT, UPDATE, VIEW DEFINITION ON [beasley_sloth_3].[tbl_obs] TO [OUHSC\qqcdwstaff1]
+GRANT DELETE, INSERT, SELECT, UPDATE, VIEW DEFINITION ON [beasley_sloth_3].[tbl_obs] TO [OUHSC\qqcdwstaff2]
+GRANT DELETE, INSERT, SELECT, UPDATE, VIEW DEFINITION ON [beasley_sloth_3].[tbl_obs] TO [OUHSC\qqcdwstaff3]
+GO
+```
+
+
+
+Distribution of CDW Products
+------------------------------------------------------
+
+There are several ways to distribute  datasets containing PHI.  It depends on factors including (a) frequency of updates, (b) comfort of collaborators, (c) size of files, and (d) sensitivity of the PHI.
+
+### Distribute through a REDCap project
+
+1.  Create roles & assign users
+    * `admin` has all rights *except* API.  Includes Ashley, Will(a), David(a), & Sree(a).
+    * `api` has only API rights.  Includes Will & Sree.
+    * `investigator` has insert/update/delete right.  But cannot modify the data structure or user rights.  The user cannot access the API until they've had training (how to secure the token and extracted PHI).
+
+1. Save the data dictionary/structure (but not the data itself) in `database/cache-dictionary.csv` of the code repository.
+
+### Distribute through SFTP
+
+When the CDW collaborator needs only a few products, the effort to create a fileserver space & permissions group is more trouble than it's worth.  Distributing over OUHSC's securre FTP site has several benefits, including (a) quick set up of files, and (b) sensitive files are automatically removed after a few days.
+
+TODO: Ashley, please complete some details that may help the collaborators follow.
+1. https://securefiletransfer.ouhsc.edu
+
+
+### Distribute through Fileserver space
 
 Ideally all PHI is contained within the warehouse and the REDCap cache.  However, some times the project requires storing files with PHI fileserver space.
 
@@ -72,52 +142,3 @@ Template to send Peds IS.  Steps 1, 2, & 5 need to be modified for each project.
 >     * Ian Stewart (username isteward; email ian-steward@ouhsc.edu) -Principal Investigator
 >     * William Preston (username wpreston; email william-preston@ouhsc.edu) -Research Post doc
 > 6. DO NOT grant permission inheritance from the bbmc root folder (ie, `\\redacted/BBMC`).  In other words, we???d like only specified BBMC members to have access to the project folder --membership in group `peds-bbmc-users` is NOT sufficient to access the folder.  (However membership in the group `peds-bbmc-admin` is sufficient.)
-
-
-## Repository files
-
-1. Assemble & configure metadata files.
-
-1. Develop 'staging lanes' that move & manipulate project-approved data from the CDW database to the staging area database.
-
-    Both databases live in the same SQL Server hosted by Shared Services.  Sometimes the transportation stream never leaves the server; sometimes it is processed by [R](https://www.r-project.org/) on a workstation on the network.
-
-1. Develop 'dispense lanes' that move & manipulate project-approved data from staging area database into the REDCap project.  
-
-    REDCap is also hosted by Shared Services.  ODBC carries data from the database to a network workstation.  The REDCap API (via our [REDCapR](https://CRAN.R-project.org/package=REDCapR) package) carries data from the workstation to the REDCap instance.
-
-1. Develop static reports, which present the aggregated or de-identified data.  The reports' typical roles include
-
-    * document how much data moved where & when (for the sake of validity checks).
-    * present the statistical analysis.
-
-
-1. Develop interactive [Shiny](https://shiny.rstudio.com/gallery/) reports  on the BBMC's server, hosted by Shared Services.  Data is either aggregated or de-identified.
-
-
-## ODBC DSN
-
-Besides a clone of the repository, the only thing on the workstation is the ODBC DSN.  These need to be set up for the outpost and cache_staging only once, with [these instructions](https://github.com/OuhscBbmc/BbmcResources/blob/master/instructions/odbc-dsn.md#create-local-dsn).
-
-## CDW Cache Staging
-
-The cache_staging database already exists.  Create a schema (to organize the project's tables, and keep them isolated from )
-
-```sql
-CREATE SCHEMA [beasley_sloth_3]
-
-GRANT DELETE, INSERT, SELECT, UPDATE, VIEW DEFINITION ON [beasley_sloth_3].[tbl_obs] TO [OUHSC\qqcdwstaff1]
-GRANT DELETE, INSERT, SELECT, UPDATE, VIEW DEFINITION ON [beasley_sloth_3].[tbl_obs] TO [OUHSC\qqcdwstaff2]
-GRANT DELETE, INSERT, SELECT, UPDATE, VIEW DEFINITION ON [beasley_sloth_3].[tbl_obs] TO [OUHSC\qqcdwstaff3]
-GO
-```
-
-
-## REDCap project
-
-1.  Create roles & assign users
-    * `admin` has all rights *except* API.  Includes Ashley, Will(a), David(a), & Sree(a).
-    * `api` has only API rights.  Includes Will & Sree.
-    * `investigator` has insert/update/delete right.  But cannot modify the data structure or user rights.  The user cannot access the API until they've had training (how to secure the token and extracted PHI).
-
-1. Save the data dictionary/structure (but not the data itself) in `database/cache-dictionary.csv` of the code repository.
