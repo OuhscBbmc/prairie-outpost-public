@@ -5,7 +5,9 @@ All Sources
 -----------------
 
 1. **file format**
-    1. *plain text csv*: incoming files should be plain-text [csv](https://en.wikipedia.org/wiki/Comma-separated_values).  Not Excel or other proprietary or binary format.
+    1. *plain text csv*: incoming files should be plain-text [csv](https://en.wikipedia.org/wiki/Comma-separated_values).  
+        1. Not Excel or other proprietary or binary format.
+        1. If Excel is necessary for some reason, please avoid multiple tabs/worksheets.  (They're slightly more complicated to read with automation, and the produces the opportunities for inconsistent variables across tabs/worksheets.)
     1. *cells enclosed in quotes*: a 'cell' should be enclosed in double quotes, especially if it's a string/character variable.
 1. **date format**: use `YYYY-MM-DD` (*i.e.*, [ISO-8601](https://www.explainxkcd.com/wiki/index.php/1179:_ISO_8601))
 1. **time format**: use `HH:MM` or `HH:MM:SS`.  Use a leading zero from midnight to 9:59am (*i.e.*, **0**9:59am) 
