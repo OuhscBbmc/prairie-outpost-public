@@ -20,4 +20,10 @@ Meditech
 1. **patient identifier**: `mrn_meditech` instead of `mrn`, `MRI Rec#`, or `Med Rec#`.
 1. **account/admission identifier**: `account_number` instead of `mrn`, `Acct#`, or `Account#`.
 1. **patient's full name**: `name_full` instead of `Patient Name` or `Name`.
-1. **blood pressure**: `bp_diastolic` and `bp_systolic` as separate integer variables.
+1. **long/tall format**: one row per dx per patient (up to 50 dxs) instead of 50 *columns* of `dx` per patient.  Applies to
+    1. diagnosis code & description
+    1. order date & number
+    1. procedure name & number
+
+Meditech Rejected:
+1. **blood pressure**: `bp_diastolic` and `bp_systolic` as separate integer variables.  --Justin's response: it's stored as combined value in Meditech.
