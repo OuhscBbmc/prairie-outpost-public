@@ -1,0 +1,16 @@
+ICD-10-CM Code	ICD-10-CM Code Description	CCSR Category	CCSR Category Description
+A000	Cholera due to Vibrio cholerae 01, biovar cholerae	DIG001	Intestinal infection
+A000	Cholera due to Vibrio cholerae 01, biovar cholerae	INF003	Bacterial infections
+A001	Cholera due to Vibrio cholerae 01, biovar eltor	DIG001	Intestinal infection
+A001	Cholera due to Vibrio cholerae 01, biovar eltor	INF003	Bacterial infections
+A009	Cholera, unspecified	DIG001	Intestinal infection
+A009	Cholera, unspecified	INF003	Bacterial infections
+A0100	Typhoid fever, unspecified	DIG001	Intestinal infection
+A0100	Typhoid fever, unspecified	INF003	Bacterial infections
+A0101	Typhoid meningitis	INF003	Bacterial infections
+A0101	Typhoid meningitis	NVS001	Meningitis
+A0102	Typhoid fever with heart involvement	INF003	Bacterial infections
+A0103	Typhoid pneumonia	INF003	Bacterial infections
+A0103	Typhoid pneumonia	RSP002	Pneumonia (except that caused by tuberculosis)
+A0104	Typhoid arthritis	INF003	Bacterial infections
+A0104	Typhoid arthritis	MUS001	Infective arthritis
