@@ -1,12 +1,13 @@
-N3C Presentation for SOMI 
+N3C and Inter-Institutional Trends in Medical Research
 ===================================
 
-Will, Geneva, Ashley, & David 2021-05-28
+* N3C Presentation for SOMI in Developmental & Behavioral Pediatrics Section
+* Beasley, W. H., Marshall, G., Thumann, A., Bard, D. E., "N3C and Inter-Institutional Trends in Medical Research", SOMI, Developmental & Behavioral Pediatrics Section, OKC, Invited, Oral Presentation. April 28, 2021.
 
 Human Components
 -----------------------------------
 
-* NIH-funded
+* The National COVID Cohort Collaborative (N3C) is NIH-funded
 * 56+ Contributing Institutions
 * 100s+ of researchers, clinicians, & data scientists
 * 1.6M covid patients; 5.9M comparison patients
@@ -124,7 +125,6 @@ Communication & Collaboration
 * Big group meetings
 * Small group meetings
 * Slack, Google Groups, & Google Drive
-
 
 Resources
 ----------------------------------
