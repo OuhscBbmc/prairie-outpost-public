@@ -133,6 +133,7 @@ Resources
 * General Info: https://ncats.nih.gov/n3c
 * N3C tutorials: https://covid.cd2h.org/tutorials
 * OMOP tutorials: https://www.ohdsi.org/tutorial-workshops/
+* Book of OHDSI (online): https://ohdsi.github.io/TheBookOfOhdsi/
 * OMOP CDM definitions: https://ohdsi.github.io/CommonDataModel/cdm60.html#Clinical_Data_Tables
 * OMOP CDM subset for N3C: https://ncats.nih.gov/files/OMOP_CDM_COVID.pdf
 * Explore OMOP Vocabulary with Athena: https://athena.ohdsi.org/search-terms/terms
