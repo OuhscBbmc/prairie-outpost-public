@@ -26,7 +26,7 @@ Future for Research
 * Will be important for fields where
 
   * rich intra-individual data is required.  (If it's just a 30 minute on-line survey, then a single site is fine.)
-  * the signal to noise ratio is weak.  (Started w/, rare side effects of medications)
+  * the signal to noise ratio is weak.  (Started w/ rare side effects of medications)
   * one site can't capture the whole nation.  (Philly & Portland may have the best researchers in a certain subspecialty, but they don't have partnerships or experience with Native American and Cuban American populations.)
   * the protocol can be roughly consistent across sites.  (Or at least data capture the differences.)
   * the data structure is roughly consistent across sites.  (Or at least can be transformed into something consistent.)
@@ -79,13 +79,19 @@ Computing Components
 Demo 1
 -----------------------------------
 
-Somethign with synpuf
+synpuf
 
 
 Demo 2
 -----------------------------------
 
 Site quality scorecard
+
+
+Demo 3
+-----------------------------------
+
+glmnet
 
 
 Likely Roles for DBP Reseachers
@@ -99,7 +105,18 @@ Likely Roles for DBP Reseachers
   
 * Attend domain team meetings and potentially join long-term.  You'll be collaborating with other schools.
 
-* Approach Geneva or me with your own idea.  We'll see if there's an existing similar project you'd like to join.  If not, we can help you write your own proposal to be approved by an N3C governance board.  If it requires zipcodes, you may need OU IRB approval too.
+* Approach Geneva or me with your own idea.  We'll see if there's an existing similar project you'd like to join.  If not, we can help you write your own proposal to be approved by an N3C governance board.  If it requires something like zipcodes, you may need OU IRB approval too.
+
+* Advantages of N3C and EMR research
+  * Dataset is already collected.  Don't need to design a study and get it approved
+  * IRB is typically exempt.  For N3C specifically, you'll need
+    * HIPAA form 9 waiver ("Representation for Research on Limited Data Sets of PHI")
+    * Protocol
+    * Copy of OU & N3C DUA (data use agreement)
+
+* Disadvantages
+  * observational data (not controlled & prospective)
+  * step learning curve if you don't already know Spark & R.  (Alternatively, you can work with someone like Geneva or me)
 
 Communication & Collaboration
 -----------------------------------
