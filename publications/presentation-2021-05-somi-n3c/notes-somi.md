@@ -2,7 +2,7 @@ N3C and Inter-Institutional Trends in Medical Research
 ===================================
 
 * N3C Presentation for SOMI in Developmental & Behavioral Pediatrics Section
-* Beasley, W. H., Marshall, G., Thumann, A., Bard, D. E., "N3C and Inter-Institutional Trends in Medical Research", SOMI, Developmental & Behavioral Pediatrics Section, OKC, Invited, Oral Presentation. April 28, 2021.
+* Beasley, W. H., Marshall, G., Thumann, A., Bard, D. E., "N3C and Inter-Institutional Trends in Medical Research", SOMI, Developmental & Behavioral Pediatrics Section, OKC, Invited, Oral Presentation. May 28, 2021.
 
 Human Components
 -----------------------------------
