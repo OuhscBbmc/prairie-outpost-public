@@ -1,10 +1,32 @@
-N3C sketch
+N3C: National COVID Cohort Collaborative
 ========================================================
-author:
-date:
 autosize: true
+author:CTR N3C Education Committee
 
-At Glance
+
+
+CTR N3C Education Committee
+========================================================
+
+Will Beasley, PhD<br>
+*University of Oklahoma HSC, Biomedical & Behavioral Methodology Core (BBMC)*
+
+Shawn O'Neil, PhD<br>
+*University of Colorado School of Medicine*
+
+Jerrod Anzalone, MS<br>
+*University of Nebraska Medical Center, Dept of Neurological Sciences*
+
+Sharon Patrick, MS & Amber Abel, MS<br>
+*West Virginia University, CTSI*
+
+Kimberly Murray, MMP<br>
+*Maine Medical Center Research Institute*
+
+Elizabeth Chen, PhD & Karen Crowley, PhD<br>
+*Brown University, Biomedical Informatics*
+
+Distinctive Features of N3C
 ========================================================
 
 * Dataset
@@ -18,12 +40,14 @@ Dataset
 * Each COVID-positive patient is matched with 2 controls.
 * Identifying variables are removed (*e.g.*, names and IDs).
 * For most research projects, zip codes are masked and dates are shifted.
-* These are available for a few projects that undergo more vetting and justifiably require it (*e.g.*, a comparison of rural and urban patients).
+* These are available for a few projects that
+  * undergo more vetting and
+  * justifiably require it (*e.g.*, a comparison of rural and urban patients).
 
 Computing Environment
 ========================================================
 
-* NIH's servers contains everything you need to manipulation and analyze.
+* NIH's servers contain everything you need to manipulation and analyze.
   * Specifically, the Palantir Foundry cluster has an Apache Spark foundation.
 
 * Data are never downloaded unless they're
@@ -35,32 +59,35 @@ Computing Environment
   * SQL
   * (Git for advanced scenarios)
 
+* Once approved into the N3C, a Researcher has access to data from all institutions, not just their own.
+
 Collaborations
 ========================================================
 
-* Most projects involve 5+ researchers from 3+ institutions.
+Most projects involve 5+ researchers from 3+ institutions.
   * mix & match skills and interests
-* 30 "Domain Teams"
 
-Slide With Code
+30 "[Domain Teams](https://covid.cd2h.org/domain-teams)", including:
+  * [Elder Impact](https://covid.cd2h.org/elder)
+  * [Social Determinants of Health](https://covid.cd2h.org/social-determinants)
+  * [Immunosuppressed or Compromised  (ISC)](https://covid.cd2h.org/compromised)
+  * [Machine Learning](https://covid.cd2h.org/machine-learning)
+
+Initial Paperwork
 ========================================================
 
+At the level of:
 
-```r
-summary(cars)
-```
+* Institution (4 weeks for a "DUA")
+* Researcher  (5 hours of training)
+* Project (2 weeks for a "DUR")
 
-```
-     speed           dist
- Min.   : 4.0   Min.   :  2.00
- 1st Qu.:12.0   1st Qu.: 26.00
- Median :15.0   Median : 36.00
- Mean   :15.4   Mean   : 42.98
- 3rd Qu.:19.0   3rd Qu.: 56.00
- Max.   :25.0   Max.   :120.00
-```
-
-Slide With Plot
+Learning Resources
 ========================================================
 
-![plot of chunk unnamed-chunk-2](sketch-figure/unnamed-chunk-2-1.png)
+* Initial training & videos
+* Regular office hours & user groups
+* book
+* summer short course
+* Everything for Python, R, & SQL
+

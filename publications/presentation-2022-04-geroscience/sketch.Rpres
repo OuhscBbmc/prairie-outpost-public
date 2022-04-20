@@ -1,28 +1,93 @@
-N3C sketch
+N3C: National COVID Cohort Collaborative
 ========================================================
-author:
-date:
 autosize: true
+author:CTR N3C Education Committee
 
-First Slide
+
+
+CTR N3C Education Committee
 ========================================================
 
-For more details on authoring R presentations please visit <https://support.rstudio.com/hc/en-us/articles/200486468>.
+Will Beasley, PhD<br>
+*University of Oklahoma HSC, Biomedical & Behavioral Methodology Core (BBMC)*
 
-- Bullet 1
-- Bullet 2
-- Bullet 3
+Shawn O'Neil, PhD<br>
+*University of Colorado School of Medicine*
 
-Slide With Code
+Jerrod Anzalone, MS<br>
+*University of Nebraska Medical Center, Dept of Neurological Sciences*
+
+Sharon Patrick, MS & Amber Abel, MS<br>
+*West Virginia University, CTSI*
+
+Kimberly Murray, MMP<br>
+*Maine Medical Center Research Institute*
+
+Elizabeth Chen, PhD & Karen Crowley, PhD<br>
+*Brown University, Biomedical Informatics*
+
+Distinctive Features of N3C
 ========================================================
 
-```{r}
-summary(cars)
-```
+* Dataset
+* Computing Environment
+* Collaborations
 
-Slide With Plot
+Dataset
 ========================================================
 
-```{r, echo=FALSE}
-plot(cars)
-```
+* 1.5M detailed longitudinal patient records since 2018, from 70+ US Institutions.
+* Each COVID-positive patient is matched with 2 controls.
+* Identifying variables are removed (*e.g.*, names and IDs).
+* For most research projects, zip codes are masked and dates are shifted.
+* These are available for a few projects that
+  * undergo more vetting and
+  * justifiably require it (*e.g.*, a comparison of rural and urban patients).
+
+Computing Environment
+========================================================
+
+* NIH's servers contain everything you need to manipulation and analyze.
+  * Specifically, the Palantir Foundry cluster has an Apache Spark foundation.
+
+* Data are never downloaded unless they're
+  * aggregated to large cell sizes and
+  * approved by a committee.
+
+* Contains tools familiar to most data scientists and statisticians:
+  * R & Python (and most of their packages)
+  * SQL
+  * (Git for advanced scenarios)
+
+* Once approved into the N3C, a Researcher has access to data from all institutions, not just their own.
+
+Collaborations
+========================================================
+
+Most projects involve 5+ researchers from 3+ institutions.
+  * mix & match skills and interests
+
+30 "[Domain Teams](https://covid.cd2h.org/domain-teams)", including:
+  * [Elder Impact](https://covid.cd2h.org/elder)
+  * [Social Determinants of Health](https://covid.cd2h.org/social-determinants)
+  * [Immunosuppressed or Compromised  (ISC)](https://covid.cd2h.org/compromised)
+  * [Machine Learning](https://covid.cd2h.org/machine-learning)
+
+Initial Paperwork
+========================================================
+
+At the level of:
+
+* Institution (4 weeks for a "DUA")
+* Researcher  (5 hours of training)
+* Project (2 weeks for a "DUR")
+
+Learning Resources
+========================================================
+
+* Initial training & videos
+* Regular office hours & user groups
+* book
+* summer short course
+* Everything for Python, R, & SQL
+
