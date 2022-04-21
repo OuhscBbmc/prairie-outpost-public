@@ -785,25 +785,32 @@ hljs.initHighlightingOnLoad();
   <div class="slides">
 
 <section data-state="section" data-transition="linear" data-transition-speed="default">
-<h1>N3C: National COVID Cohort Collaborative</h1><p></p>
+<h1>N3C: National COVID Cohort Collaborative</h1><p>CTR N3C Education Committee<br/>April 2022</p>
 
 <div class="slideContent" >
-<p>Will Beasley, PhD &amp; David Bard, PhD<br>
+
+</div>
+
+</section>
+<section data-transition="linear" data-transition-speed="default">
+<h3>CTR N3C Education Committee</h3>
+<div class="slideContent" >
+<p><a href="https://scholar.google.com/citations?user=ffsJTC0AAAAJ&amp;hl=en">Will Beasley</a>, PhD<br>
 <em>University of Oklahoma HSC, Biomedical &amp; Behavioral Methodology Core (BBMC)</em></p>
 
-<p>Shawn O&#39;Neil, PhD<br>
+<p><a href="https://som.ucdenver.edu/Profiles/Faculty/Profile/35866">Shawn O&#39;Neil</a>, PhD<br>
 <em>University of Colorado School of Medicine</em></p>
 
-<p>Jerrod Anzalone, MS<br>
+<p><a href="https://www.unmc.edu/bmi/current-students/student-bios/anzalone-jerrod-bio.html">Jerrod Anzalone</a>, MS<br>
 <em>University of Nebraska Medical Center, Dept of Neurological Sciences</em></p>
 
-<p>Sharon Patrick, MS<br>
+<p><a href="https://directory.hsc.wvu.edu/Profile/67096">Sharon Patrick</a>, MS &amp; <a href="">Amber Abel</a>, MS<br>
 <em>West Virginia University, CTSI</em></p>
 
-<p>Kimberly Murray, MMP<br>
+<p><a href="https://mmcri.org/?page_id=13959">Kimberly Murray</a>, MMP<br>
 <em>Maine Medical Center Research Institute</em></p>
 
-<p>Elizabeth Chen, PhD &amp; Karen Crowley, PhD<br>
+<p><a href="https://vivo.brown.edu/display/echen13">Elizabeth Chen</a>, PhD &amp; <a href="https://www.brown.edu/academics/medical/about-us/research/centers-institutes-and-programs/biomedical-informatics/people/data-scientists/karen-crowley-phd">Karen Crowley</a>, PhD<br>
 <em>Brown University, Biomedical Informatics</em></p>
 
 </div>
@@ -825,7 +832,7 @@ hljs.initHighlightingOnLoad();
 <h3>Dataset</h3>
 <div class="slideContent" >
 <ul>
-<li>1.5M detailed longitudinal patient records since 2018, from 70+ US Institutions.</li>
+<li>13M patients (w/ 2B detailed longitudinal records) since 2018, from 70 US Institutions.</li>
 <li>Each COVID-positive patient is matched with 2 controls.</li>
 <li>Identifying variables are removed (<em>e.g.</em>, names and IDs).</li>
 <li>For most research projects, zip codes are masked and dates are shifted.</li>
@@ -836,6 +843,8 @@ hljs.initHighlightingOnLoad();
 <li>justifiably require it (<em>e.g.</em>, a comparison of rural and urban patients).</li>
 </ul></li>
 </ul>
+
+<p><a href="https://covid.cd2h.org/dashboard/cohort">https://covid.cd2h.org/dashboard/cohort</a></p>
 
 </div>
 
@@ -895,10 +904,129 @@ hljs.initHighlightingOnLoad();
 <p>At the level of:</p>
 
 <ul>
-<li>Institution</li>
-<li>Researcher</li>
-<li>Project</li>
+<li>Institution (4 weeks for a &ldquo;DUA&rdquo;)</li>
+<li>Researcher  (5 hours of training)</li>
+<li>Project (2 weeks for a &ldquo;DUR&rdquo;)</li>
 </ul>
+
+</div>
+
+</section>
+<section data-transition="linear" data-transition-speed="default">
+<h3>OMOP CDM</h3>
+<div class="slideContent" >
+<ul>
+<li>Heterogenous EMRs are transformed to this universal standard.</li>
+<li><a href="https://ohdsi.github.io/CommonDataModel/cdm60.html">Table structure</a> is standardized</li>
+<li>Vocabulary is standardized</li>
+<li>Managed by OHDSI (<em>ie</em>, &ldquo;odyssey&rdquo;)</li>
+<li>Book of OHDSI: <a href="https://ohdsi.github.io/TheBookOfOhdsi/">https://ohdsi.github.io/TheBookOfOhdsi/</a></li>
+</ul>
+
+</div>
+
+</section>
+<section data-transition="linear" data-transition-speed="default">
+<h3>Learning Resources</h3>
+<div class="slideContent" >
+<ul>
+<li>Initial training document &amp; videos</li>
+<li>Regular office hours &amp; user groups</li>
+<li>Book of OHDSI (<em>ie</em>, &ldquo;odyssey&rdquo; &ndash;the keepers of OMOP)</li>
+<li>Book of N3C</li>
+<li>summer short course</li>
+<li>Everything for Python, R, &amp; SQL</li>
+</ul>
+
+</div>
+
+</section>
+<section data-transition="linear" data-transition-speed="default">
+<h3>Research with EMRs</h3>
+<div class="slideContent" >
+<ul>
+<li><em>E</em> lectronic <em>M</em> edical (or Health) <em>R</em> ecords
+
+<ul>
+<li>roughly a synonym with &ldquo;hospital database&rdquo;</li>
+</ul></li>
+<li>Almost always observational</li>
+<li>If using outpatient outcomes, there are always holes</li>
+<li>Possibly inconsistent over time &amp; clinics</li>
+<li>Data collection that&#39;s good for clinical care isn&#39;t necessarily good for research</li>
+<li>Samples are typically free, huge, &amp; instant</li>
+<li>Decide if the trade offs are worth it</li>
+<li>EMR research will never replace RCTs, but they can
+
+<ul>
+<li>supplement previous RCT and</li>
+<li>detect trends to pilot future RCTs.</li>
+</ul></li>
+</ul>
+
+</div>
+
+</section>
+<section data-transition="linear" data-transition-speed="default">
+<h3>Research with N3C</h3>
+<div class="slideContent" >
+<ul>
+<li>All the EMR pros &amp; cons</li>
+<li>New Cons:
+
+<ul>
+<li>more heterogeneity &amp; inconsistencies</li>
+</ul></li>
+<li>New pros:
+
+<ul>
+<li>Nation-wide collaborators</li>
+<li>Nation-wide population</li>
+<li>More power to detect small signals</li>
+</ul></li>
+</ul>
+
+</div>
+
+</section>
+<section data-transition="linear" data-transition-speed="default">
+<h3>FAIR &amp; N3C</h3>
+<div class="slideContent" >
+<p>Typical limitations on reproducibility with health data.</p>
+
+<p>Many <a href="https://www.go-fair.org/fair-principles">FAIR</a> principles are promoted with OMOP&#39;s metadata structure &amp; Palantir Foundry&#39;s toolset.</p>
+
+<ul>
+<li><strong>OMOP tables</strong>: follows the CDM (common data model)
+
+<ul>
+<li>requires N3C access</li>
+</ul></li>
+<li><strong>N3C tables</strong>: templates and the &ldquo;Knowledge Store&rdquo;
+
+<ul>
+<li>requires N3C access</li>
+</ul></li>
+<li><strong>metadata</strong>: OMOP concepts are portable plain-text files
+
+<ul>
+<li>public</li>
+</ul></li>
+<li><strong>code</strong>: standard SQL, Python, &amp; R engines.
+
+<ul>
+<li>code is portable plain-text, but the dependencies/relationships between nodes is Enclave-specific</li>
+</ul></li>
+</ul>
+
+</div>
+
+</section>
+<section data-transition="linear" data-transition-speed="default">
+<h3>Demo: Start w&#x2F; a patient-level Table</h3>
+<div class="slideContent" >
+<p>Statistician and Director of Informatics of the BBMC (Biomedical &amp; Behavioral Methodology Core) in the College of Medicine.
+Including the Clinical Research Data Warehouse (which is fed by the campus&#39;s EMRs).</p>
 
 </div>
 

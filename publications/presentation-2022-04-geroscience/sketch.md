@@ -1,7 +1,8 @@
 N3C: National COVID Cohort Collaborative
 ========================================================
 autosize: true
-author:CTR N3C Education Committee
+date: April 2022
+author: CTR N3C Education Committee
 
 
 
@@ -36,13 +37,15 @@ Distinctive Features of N3C
 Dataset
 ========================================================
 
-* 1.5M detailed longitudinal patient records since 2018, from 70+ US Institutions.
+* 13M patients (w/ 2B detailed longitudinal records) since 2018, from 70 US Institutions.
 * Each COVID-positive patient is matched with 2 controls.
 * Identifying variables are removed (*e.g.*, names and IDs).
 * For most research projects, zip codes are masked and dates are shifted.
 * These are available for a few projects that
   * undergo more vetting and
   * justifiably require it (*e.g.*, a comparison of rural and urban patients).
+
+https://covid.cd2h.org/dashboard/cohort
 
 Computing Environment
 ========================================================
@@ -82,12 +85,71 @@ At the level of:
 * Researcher  (5 hours of training)
 * Project (2 weeks for a "DUR")
 
+OMOP CDM
+========================================================
+
+* Heterogenous EMRs are transformed to this universal standard.
+* [Table structure](https://ohdsi.github.io/CommonDataModel/cdm60.html) is standardized
+* Vocabulary is standardized
+* Managed by OHDSI (*ie*, "odyssey")
+* Book of OHDSI: https://ohdsi.github.io/TheBookOfOhdsi/
+
+
 Learning Resources
 ========================================================
 
-* Initial training & videos
+* Initial training document & videos
 * Regular office hours & user groups
-* book
+* Book of OHDSI (*ie*, "odyssey" --the keepers of OMOP)
+* Book of N3C
 * summer short course
 * Everything for Python, R, & SQL
 
+Research with EMRs
+========================================================
+
+* *E* lectronic *M* edical (or Health) *R* ecords
+  * roughly a synonym with "hospital database"
+* Almost always observational
+* If using outpatient outcomes, there are always holes
+* Possibly inconsistent over time & clinics
+* Data collection that's good for clinical care isn't necessarily good for research
+* Samples are typically free, huge, & instant
+* Decide if the trade offs are worth it
+* EMR research will never replace RCTs, but they can
+  * supplement previous RCT and
+  * detect trends to pilot future RCTs.
+
+Research with N3C
+========================================================
+
+* All the EMR pros & cons
+* New Cons:
+  * more heterogeneity & inconsistencies
+* New pros:
+  * Nation-wide collaborators
+  * Nation-wide population
+  * More power to detect small signals
+
+FAIR & N3C
+========================================================
+
+Typical limitations on reproducibility with health data.
+
+Many [FAIR](https://www.go-fair.org/fair-principles) principles are promoted with OMOP's metadata structure & Palantir Foundry's toolset.
+
+
+* **OMOP tables**: follows the CDM (common data model)
+  * requires N3C access
+* **N3C tables**: templates and the "Knowledge Store"
+  * requires N3C access
+* **metadata**: OMOP concepts are portable plain-text files
+  * public
+* **code**: standard SQL, Python, & R engines.
+  * code is portable plain-text, but the dependencies/relationships between nodes is Enclave-specific
+
+Demo: Start w/ a patient-level Table
+========================================================
+
+Statistician and Director of Informatics of the BBMC (Biomedical & Behavioral Methodology Core) in the College of Medicine.
+Including the Clinical Research Data Warehouse (which is fed by the campus's EMRs).
