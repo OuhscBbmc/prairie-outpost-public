@@ -30,6 +30,7 @@ CTR N3C Education Committee
 Distinctive Features of N3C
 ========================================================
 
+* Background
 * Dataset
 * Computing Environment
 * Collaborations
@@ -51,7 +52,7 @@ Computing Environment
 ========================================================
 
 * NIH's servers contain everything you need to manipulation and analyze.
-  * Specifically, the Palantir Foundry cluster has an Apache Spark foundation.
+  * The "N3C Enclave" is a Palantir Foundry cluster with an Apache Spark foundation.
 
 * Data are never downloaded unless they're
   * aggregated to large cell sizes and
@@ -98,10 +99,10 @@ OMOP CDM
 Learning Resources
 ========================================================
 
-* Initial training document & videos
-* Regular office hours & user groups
-* Book of OHDSI (*ie*, "odyssey" --the keepers of OMOP)
-* Book of N3C
+* Initial N3C training document & videos
+* Regular N3C office hours & user groups
+* [Book of OHDSI](https://ohdsi.github.io/TheBookOfOhdsi/)
+* [Book of N3C](https://national-covid-cohort-collaborative.github.io/book-of-n3c-v1/)
 * summer short course
 * Everything for Python, R, & SQL
 
@@ -151,5 +152,8 @@ Many [FAIR](https://www.go-fair.org/fair-principles) principles are promoted wit
 Demo: Start w/ a patient-level Table
 ========================================================
 
-Statistician and Director of Informatics of the BBMC (Biomedical & Behavioral Methodology Core) in the College of Medicine.
-Including the Clinical Research Data Warehouse (which is fed by the campus's EMRs).
+N3C's Elder Impact Domain Team
+========================================================
+
+<!-- Statistician and Director of Informatics of the BBMC (Biomedical & Behavioral Methodology Core) in the College of Medicine. -->
+<!-- Including the Clinical Research Data Warehouse (which is fed by the campus's EMRs). -->
