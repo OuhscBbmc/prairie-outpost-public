@@ -8,22 +8,22 @@ author:CTR N3C Education Committee
 CTR N3C Education Committee
 ========================================================
 
-Will Beasley, PhD<br>
+[Will Beasley](https://scholar.google.com/citations?user=ffsJTC0AAAAJ&hl=en), PhD<br>
 *University of Oklahoma HSC, Biomedical & Behavioral Methodology Core (BBMC)*
 
-Shawn O'Neil, PhD<br>
+[Shawn O'Neil](https://som.ucdenver.edu/Profiles/Faculty/Profile/35866), PhD<br>
 *University of Colorado School of Medicine*
 
-Jerrod Anzalone, MS<br>
+[Jerrod Anzalone](https://www.unmc.edu/bmi/current-students/student-bios/anzalone-jerrod-bio.html), MS<br>
 *University of Nebraska Medical Center, Dept of Neurological Sciences*
 
-Sharon Patrick, MS & Amber Abel, MS<br>
+[Sharon Patrick](https://directory.hsc.wvu.edu/Profile/67096), MS & [Amber Abel](), MS<br>
 *West Virginia University, CTSI*
 
-Kimberly Murray, MMP<br>
+[Kimberly Murray](https://mmcri.org/?page_id=13959), MMP<br>
 *Maine Medical Center Research Institute*
 
-Elizabeth Chen, PhD & Karen Crowley, PhD<br>
+[Elizabeth Chen](https://vivo.brown.edu/display/echen13), PhD & [Karen Crowley](https://www.brown.edu/academics/medical/about-us/research/centers-institutes-and-programs/biomedical-informatics/people/data-scientists/karen-crowley-phd), PhD<br>
 *Brown University, Biomedical Informatics*
 
 Distinctive Features of N3C
