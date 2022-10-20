@@ -15,8 +15,8 @@
    id="svg2"
    version="1.1"
    inkscape:version="0.91 r13725"
-   sodipodi:docname="global-darker-text.svg"
-   inkscape:export-filename="D:\Projects\Ouhsc\Bbmc\cdw\prairie-outpost-public\documentation\architecture\images\global-darker-text.png"
+   sodipodi:docname="global.svg"
+   inkscape:export-filename="D:\Projects\Ouhsc\Bbmc\cdw\prairie-outpost-public\documentation\architecture\images\global.png"
    inkscape:export-xdpi="300"
    inkscape:export-ydpi="300">
   <sodipodi:namedview
@@ -27,7 +27,7 @@
      inkscape:pageopacity="1"
      inkscape:pageshadow="2"
      inkscape:zoom="2.0576807"
-     inkscape:cx="372.89726"
+     inkscape:cx="300.24264"
      inkscape:cy="553.83051"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
@@ -799,7 +799,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
