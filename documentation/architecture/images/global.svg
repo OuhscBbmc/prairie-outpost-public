@@ -15,19 +15,19 @@
    id="svg2"
    version="1.1"
    inkscape:version="0.91 r13725"
-   sodipodi:docname="global.svg"
-   inkscape:export-filename="D:\Projects\Ouhsc\Bbmc\cdw\prairie-outpost-public\documentation\architecture\images\global.png"
+   sodipodi:docname="global-darker-text.svg"
+   inkscape:export-filename="D:\Projects\Ouhsc\Bbmc\cdw\prairie-outpost-public\documentation\architecture\images\global-darker-text.png"
    inkscape:export-xdpi="300"
    inkscape:export-ydpi="300">
   <sodipodi:namedview
      id="base"
-     pagecolor="#ffffff"
-     bordercolor="#666666"
-     borderopacity="1.0"
-     inkscape:pageopacity="0.0"
+     pagecolor="#e4e4e4"
+     bordercolor="#ffffff"
+     borderopacity="0"
+     inkscape:pageopacity="1"
      inkscape:pageshadow="2"
      inkscape:zoom="2.0576807"
-     inkscape:cx="504.72896"
+     inkscape:cx="372.89726"
      inkscape:cy="553.83051"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
@@ -1764,7 +1764,7 @@
     </g>
     <text
        xml:space="preserve"
-       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#37506d;fill-opacity:1;stroke:none;font-family:Sans"
+       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#26384c;fill-opacity:1;stroke:none;font-family:Sans;"
        x="100.60481"
        y="-107.04862"
        id="text5028"
@@ -1773,7 +1773,7 @@
          id="tspan5030"
          x="100.60481"
          y="-107.04862"
-         style="font-size:20px;font-style:italic;fill:#37506d;fill-opacity:1">at rest</tspan></text>
+         style="font-size:20px;font-style:italic;fill:#26384c;fill-opacity:1;">at rest</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
@@ -1786,7 +1786,7 @@
          id="tspan6484" /></text>
     <text
        xml:space="preserve"
-       style="font-size:40px;font-style:normal;font-weight:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#37506d;fill-opacity:1;stroke:none;font-family:Sans"
+       style="font-size:40px;font-style:normal;font-weight:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#26384c;fill-opacity:1;stroke:none;font-family:Sans;"
        x="261.51825"
        y="-135.45119"
        id="text5028-6"
@@ -1795,15 +1795,15 @@
          id="tspan5030-6"
          x="261.51825"
          y="-135.45119"
-         style="font-size:20px;font-style:italic;text-align:center;text-anchor:middle;fill:#37506d;fill-opacity:1">refreshed</tspan><tspan
+         style="font-size:20px;font-style:italic;text-align:center;text-anchor:middle;fill:#26384c;fill-opacity:1;">refreshed</tspan><tspan
          sodipodi:role="line"
          x="261.51825"
          y="-110.45119"
-         style="font-size:20px;font-style:italic;text-align:center;text-anchor:middle;fill:#37506d;fill-opacity:1"
+         style="font-size:20px;font-style:italic;text-align:center;text-anchor:middle;fill:#26384c;fill-opacity:1;"
          id="tspan6549">nightly</tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#37506d;fill-opacity:1;stroke:none;font-family:Sans"
+       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#26384c;fill-opacity:1;stroke:none;font-family:Sans;"
        x="395.10544"
        y="-107.04862"
        id="text5028-4"
@@ -1812,10 +1812,10 @@
          id="tspan5030-1"
          x="395.10544"
          y="-107.04862"
-         style="font-size:20px;font-style:italic;fill:#37506d;fill-opacity:1">at rest</tspan></text>
+         style="font-size:20px;font-style:italic;fill:#26384c;fill-opacity:1;">at rest</tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:40px;font-style:normal;font-weight:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#37506d;fill-opacity:1;stroke:none;font-family:Sans"
+       style="font-size:40px;font-style:normal;font-weight:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#26384c;fill-opacity:1;stroke:none;font-family:Sans;"
        x="584.71875"
        y="-160.23828"
        id="text5028-6-2"
@@ -1824,20 +1824,20 @@
          id="tspan5030-6-0"
          x="584.71875"
          y="-160.23828"
-         style="font-size:20px;font-style:italic;text-align:center;text-anchor:middle;fill:#37506d;fill-opacity:1">refreshed</tspan><tspan
+         style="font-size:20px;font-style:italic;text-align:center;text-anchor:middle;fill:#26384c;fill-opacity:1;">refreshed</tspan><tspan
          sodipodi:role="line"
          x="584.71875"
          y="-135.23828"
-         style="font-size:20px;font-style:italic;text-align:center;text-anchor:middle;fill:#37506d;fill-opacity:1"
+         style="font-size:20px;font-style:italic;text-align:center;text-anchor:middle;fill:#26384c;fill-opacity:1;"
          id="tspan6549-6">at PI's</tspan><tspan
          sodipodi:role="line"
          x="584.71875"
          y="-110.23828"
-         style="font-size:20px;font-style:italic;text-align:center;text-anchor:middle;fill:#37506d;fill-opacity:1"
+         style="font-size:20px;font-style:italic;text-align:center;text-anchor:middle;fill:#26384c;fill-opacity:1;"
          id="tspan6632">request</tspan></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#37506d;fill-opacity:1;stroke:none"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#26384c;fill-opacity:1;stroke:none;"
        x="666.74628"
        y="-107.04862"
        id="text5028-4-7"
@@ -1846,10 +1846,10 @@
          id="tspan5030-1-4"
          x="666.74628"
          y="-107.04862"
-         style="font-style:italic;font-size:20px;fill:#37506d;fill-opacity:1">at rest</tspan></text>
+         style="font-style:italic;font-size:20px;fill:#26384c;fill-opacity:1;">at rest</tspan></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:Sans;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#37506d;fill-opacity:1;stroke:none"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:Sans;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#26384c;fill-opacity:1;stroke:none;"
        x="808.91748"
        y="-111.02345"
        id="text5028-4-7-0"
@@ -1857,7 +1857,7 @@
          sodipodi:role="line"
          x="808.91748"
          y="-111.02345"
-         style="font-style:italic;font-size:20px;text-align:center;text-anchor:middle;fill:#37506d;fill-opacity:1"
+         style="font-style:italic;font-size:20px;text-align:center;text-anchor:middle;fill:#26384c;fill-opacity:1;"
          id="tspan6965">any time</tspan></text>
     <g
        id="g3654"
@@ -2046,7 +2046,7 @@
     </g>
     <text
        xml:space="preserve"
-       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#737373;fill-opacity:1;stroke:none;font-family:Sans"
+       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#4f4f4f;fill-opacity:1;stroke:none;font-family:Sans;"
        x="211.79341"
        y="-379.83566"
        id="text5028-1"
@@ -2055,15 +2055,15 @@
          id="tspan5030-7"
          x="211.79341"
          y="-379.83566"
-         style="font-size:14px;font-style:normal;fill:#737373;fill-opacity:1;stroke:none">Ingress</tspan><tspan
+         style="font-size:14px;font-style:normal;fill:#4f4f4f;fill-opacity:1;stroke:none;">Ingress</tspan><tspan
          sodipodi:role="line"
          x="211.79341"
          y="-362.33566"
-         style="font-size:14px;font-style:normal;fill:#737373;fill-opacity:1;stroke:none"
+         style="font-size:14px;font-style:normal;fill:#4f4f4f;fill-opacity:1;stroke:none;"
          id="tspan4393">Lane A</tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#737373;fill-opacity:1;stroke:none;font-family:Sans"
+       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#4f4f4f;fill-opacity:1;stroke:none;font-family:Sans;"
        x="211.79341"
        y="-281.98569"
        id="text5028-1-4"
@@ -2072,15 +2072,15 @@
          id="tspan5030-7-0"
          x="211.79341"
          y="-281.98569"
-         style="font-size:14px;font-style:normal;fill:#737373;fill-opacity:1;stroke:none">Ingress</tspan><tspan
+         style="font-size:14px;font-style:normal;fill:#4f4f4f;fill-opacity:1;stroke:none;">Ingress</tspan><tspan
          sodipodi:role="line"
          x="211.79341"
          y="-264.48569"
-         style="font-size:14px;font-style:normal;fill:#737373;fill-opacity:1;stroke:none"
+         style="font-size:14px;font-style:normal;fill:#4f4f4f;fill-opacity:1;stroke:none;"
          id="tspan4393-9">Lane B</tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#737373;fill-opacity:1;stroke:none;font-family:Sans"
+       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#4f4f4f;fill-opacity:1;stroke:none;font-family:Sans;"
        x="211.79341"
        y="-188.32761"
        id="text5028-1-4-4"
@@ -2089,15 +2089,15 @@
          id="tspan5030-7-0-8"
          x="211.79341"
          y="-188.32761"
-         style="font-size:14px;font-style:normal;fill:#737373;fill-opacity:1;stroke:none">Ingress</tspan><tspan
+         style="font-size:14px;font-style:normal;fill:#4f4f4f;fill-opacity:1;stroke:none;">Ingress</tspan><tspan
          sodipodi:role="line"
          x="211.79341"
          y="-170.82761"
-         style="font-size:14px;font-style:normal;fill:#737373;fill-opacity:1;stroke:none"
+         style="font-size:14px;font-style:normal;fill:#4f4f4f;fill-opacity:1;stroke:none;"
          id="tspan4393-9-8">Lane C</tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#737373;fill-opacity:1;stroke:none;font-family:Sans"
+       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#4f4f4f;fill-opacity:1;stroke:none;font-family:Sans;"
        x="584.72546"
        y="-206.11238"
        id="text5028-1-2"
@@ -2106,11 +2106,11 @@
          sodipodi:role="line"
          x="584.72546"
          y="-206.11238"
-         style="font-size:14px;font-style:normal;fill:#737373;fill-opacity:1;stroke:none"
+         style="font-size:14px;font-style:normal;fill:#4f4f4f;fill-opacity:1;stroke:none;"
          id="tspan4393-5">Egress Lane 1</tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#737373;fill-opacity:1;stroke:none;font-family:Sans"
+       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#4f4f4f;fill-opacity:1;stroke:none;font-family:Sans;"
        x="453.73264"
        y="-378.08304"
        id="text5028-1-2-5"
@@ -2119,11 +2119,11 @@
          sodipodi:role="line"
          x="453.73264"
          y="-378.08304"
-         style="font-size:14px;font-style:normal;fill:#737373;fill-opacity:1;stroke:none"
+         style="font-size:14px;font-style:normal;fill:#4f4f4f;fill-opacity:1;stroke:none;"
          id="tspan4393-5-1">Egress Lane 3</tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#737373;fill-opacity:1;stroke:none;font-family:Sans"
+       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#4f4f4f;fill-opacity:1;stroke:none;font-family:Sans;"
        x="398.28845"
        y="-419.37274"
        id="text5028-1-2-7"
@@ -2132,11 +2132,11 @@
          sodipodi:role="line"
          x="398.28845"
          y="-419.37274"
-         style="font-size:14px;font-style:normal;fill:#737373;fill-opacity:1;stroke:none"
+         style="font-size:14px;font-style:normal;fill:#4f4f4f;fill-opacity:1;stroke:none;"
          id="tspan4393-5-11">Egress Lane 4</tspan></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#737373;fill-opacity:1;stroke:none"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#4f4f4f;fill-opacity:1;stroke:none;"
        x="525.65161"
        y="-298.21466"
        id="text5028-1-5"
@@ -2144,7 +2144,14 @@
          sodipodi:role="line"
          x="525.65161"
          y="-298.21466"
-         style="font-style:normal;font-size:14px;fill:#737373;fill-opacity:1;stroke:none"
+         style="font-style:normal;font-size:14px;fill:#4f4f4f;fill-opacity:1;stroke:none;"
          id="tspan4393-7">Egress Lane 2</tspan></text>
+    <rect
+       style="opacity:1;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect4772"
+       width="16.523458"
+       height="0.48598406"
+       x="407.74063"
+       y="-471.98721" />
   </g>
 </svg>
