@@ -21,7 +21,7 @@ config                         <- config::get()
 # Execute to specify the column types.  It might require some manual adjustment (eg doubles to integers).
 #   OuhscMunge::readr_spec_aligned(config$path_metadata_ss_dx)
 col_types <- readr::cols_only(
-  `concept_id`        = readr::col_double(),
+  `concept_id`        = readr::col_character(),
   `vocabulary_id`     = readr::col_character(),
   `icd_code`          = readr::col_character(),
   `icd_description`   = readr::col_character(),
@@ -51,14 +51,16 @@ ds <-
   ) |>
   dplyr::filter(desired) |>
   dplyr::mutate(
-    icd_code  = sub("^\\[(.+?)\\]$", "\\1", icd_code),
+    concept_id  = sub("^\\[(.+?)\\]$", "\\1", concept_id),
+    concept_id  = as.integer(concept_id),
+    icd_code    = sub("^\\[(.+?)\\]$", "\\1", icd_code),
   ) |>
   dplyr::arrange(vocabulary_id, icd_code) # |>
   # tibble::rowid_to_column("subject_id") # Add a unique index if necessary
 
 # ---- verify-values -----------------------------------------------------------
 # OuhscMunge::verify_value_headstart(ds)
-checkmate::assert_numeric(  ds$concept_id      , any.missing=F , lower=config$omop_concept_min, upper=config$omop_concept_local , unique=T)
+checkmate::assert_integer(  ds$concept_id      , any.missing=F , lower=config$omop_concept_min, upper=config$omop_concept_local , unique=T)
 checkmate::assert_character(ds$vocabulary_id   , any.missing=F , pattern="^ICD10CM$"            )
 checkmate::assert_character(ds$icd_code        , any.missing=F , pattern=config$pattern_icd10cm            , unique=T)
 checkmate::assert_character(ds$icd_description , any.missing=F , pattern="^.{2,255}$"          )
