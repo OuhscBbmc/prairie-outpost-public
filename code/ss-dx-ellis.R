@@ -60,12 +60,16 @@ ds <-
 
 # ---- verify-values -----------------------------------------------------------
 # OuhscMunge::verify_value_headstart(ds)
+if (is.null(config$omop_concept_min  )) stop ("Uncomment `config$omop_concept_min`.")
+if (is.null(config$omop_concept_local)) stop ("Uncomment `config$omop_concept_local`.")
+if (is.null(config$pattern_icd10cm   )) stop ("Uncomment `config$pattern_icd10cm`.")
+
 checkmate::assert_integer(  ds$concept_id      , any.missing=F , lower=config$omop_concept_min, upper=config$omop_concept_local , unique=T)
-checkmate::assert_character(ds$vocabulary_id   , any.missing=F , pattern="^ICD10CM$"            )
-checkmate::assert_character(ds$icd_code        , any.missing=F , pattern=config$pattern_icd10cm            , unique=T)
-checkmate::assert_character(ds$icd_description , any.missing=F , pattern="^.{2,255}$"          )
-checkmate::assert_logical(  ds$desired         , any.missing=F                                 )
-checkmate::assert_character(ds$category        , any.missing=F , pattern="^.{2,15}$"            )
+checkmate::assert_character(ds$vocabulary_id   , any.missing=F , pattern="^ICD10CM$"              )
+checkmate::assert_character(ds$icd_code        , any.missing=F , pattern=config$pattern_icd10cm   )
+checkmate::assert_character(ds$icd_description , any.missing=F , pattern="^.{2,255}$"             )
+checkmate::assert_logical(  ds$desired         , any.missing=F                                    )
+checkmate::assert_character(ds$category        , any.missing=F , pattern="^.{2,15}$"              )
 
 combo <- paste(ds$vocabulary_id, ds$icd_code)
 checkmate::assert_character(combo, any.missing = FALSE, unique = TRUE)
