@@ -6,7 +6,7 @@ SELECT
   ,'TRUE'                           as desired
   ,'cardiac'                        as category
   ,''                               as comments
-FROM cdw_outpost.lexis.dim_dx
+FROM cdw_outpost.lexis.dx
 WHERE
   (
     vocabulary_id = 'ICD10CM'
