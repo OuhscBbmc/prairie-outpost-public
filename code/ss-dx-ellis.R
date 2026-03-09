@@ -74,6 +74,8 @@ checkmate::assert_character(ds$category        , any.missing=F , pattern="^.{2,1
 combo <- paste(ds$vocabulary_id, ds$icd_code)
 checkmate::assert_character(combo, any.missing = FALSE, unique = TRUE)
 
+# ds$icd_code[!grepl(config$pattern_icd10cm, ds$icd_code, perl = TRUE)]
+
 # ---- specify-columns-to-upload -----------------------------------------------
 # Print colnames that `dplyr::select()`  should contain below:
 #   cat(paste0("    ", colnames(ds), collapse=",\n"))
